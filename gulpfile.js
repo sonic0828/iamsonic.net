@@ -19,5 +19,5 @@ var paths = {
  */
 gulp.task('build-blog', function(){
   return gulp.src([paths.web+'**/*'])
-    .pipe(gulp.dest('/'))
+    .pipe(gulp.dest('./'))
 })
