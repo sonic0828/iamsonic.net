@@ -1,0 +1,2 @@
+# iamsonic.net
+Sonic blog
