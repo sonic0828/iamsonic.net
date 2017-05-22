@@ -14,14 +14,14 @@ nav_icons:
 
 # Friend Links
 friend_links:
-    - ['iamsonic', 'This is a link', 'http://iamsonic.net']
-    - ['Demo Links', 'You can change this in your theme config', 'http://iamsonic.net']
+    - ['iamsonic', '融点Sonic的博客', 'http://iamsonic.net']
+    - ['招友情连接', '有兴趣联系Sonic', 'http://iamsonic.net']
 
 
 # About
 about_info:
     name: "融点Sonic"
-    bio: "Sonic-融点的博客"
+    bio: "融点Sonic的博客"
     avatar: "/images/avatar.png"
 
 # Comment
