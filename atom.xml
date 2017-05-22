@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iamsonic.net/"/>
-  <updated>2017-05-22T07:14:41.000Z</updated>
+  <updated>2017-05-22T15:14:45.000Z</updated>
   <id>http://iamsonic.net/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://iamsonic.net/2017/05/20/new-blog/"/>
     <id>http://iamsonic.net/2017/05/20/new-blog/</id>
     <published>2017-05-20T08:45:23.000Z</published>
-    <updated>2017-05-22T07:14:41.000Z</updated>
+    <updated>2017-05-22T15:14:45.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了Hexo搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
+    <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Sonic-Blog-Come-back&quot;&gt;&lt;a href=&quot;#Sonic-Blog-Come-back&quot; class=&quot;headerlink&quot; title=&quot;Sonic Blog Come back!&quot;&gt;&lt;/a&gt;Sonic Blog Come back!&lt;/h2&gt;&lt;p&gt;博客主机到期，域名到期一直没有鸟。&lt;br&gt;刚好去年在工作中研究了Hexo搭建静态博客，机缘巧合又发现了好的博客主题&lt;a href=&quot;https://github.com/AngryPowman/hexo-theme-prontera&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-theme-prontera&lt;/a&gt;。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.&lt;/p&gt;
+      &lt;h2 id=&quot;Sonic-Blog-Come-back&quot;&gt;&lt;a href=&quot;#Sonic-Blog-Come-back&quot; class=&quot;headerlink&quot; title=&quot;Sonic Blog Come back!&quot;&gt;&lt;/a&gt;Sonic Blog Come back!&lt;/h2&gt;&lt;p&gt;博客主机到期，域名到期一直没有鸟。&lt;br&gt;刚好去年在工作中研究了&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;搭建静态博客，机缘巧合又发现了好的博客主题&lt;a href=&quot;https://github.com/AngryPowman/hexo-theme-prontera&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-theme-prontera&lt;/a&gt;。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.&lt;/p&gt;
 
     
     </summary>
@@ -40,7 +40,7 @@
     <link href="http://iamsonic.net/2017/03/07/internet-man-practice/"/>
     <id>http://iamsonic.net/2017/03/07/internet-man-practice/</id>
     <published>2017-03-07T10:57:59.000Z</published>
-    <updated>2017-05-22T11:13:44.000Z</updated>
+    <updated>2017-05-22T15:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><strong>“谨以此文，献给即将踏入35岁的自己，互联网从业12年之际。”</strong></p>
@@ -180,7 +180,7 @@
     <link href="http://iamsonic.net/2016/03/10/new-gulp4/"/>
     <id>http://iamsonic.net/2016/03/10/new-gulp4/</id>
     <published>2016-03-10T06:25:11.000Z</published>
-    <updated>2017-05-22T07:15:00.000Z</updated>
+    <updated>2017-05-22T15:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png" alt=""><br>gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 <code>gulp.series()</code> 和 <code>gulp.parallel()</code> 方法用于组合任务，多个任务执行时，<strong>可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。</strong></p>
 <p>##全新的 gulp.task()<br>从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png" alt=""></p>
@@ -270,11 +270,65 @@
   </entry>
   
   <entry>
+    <title>回家接老婆儿子咯</title>
+    <link href="http://iamsonic.net/2011/04/01/take-wife-son/"/>
+    <id>http://iamsonic.net/2011/04/01/take-wife-son/</id>
+    <published>2011-04-01T15:05:36.000Z</published>
+    <updated>2017-05-22T15:06:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>久别近两个月，后天就要回老婆家接她们母子回广州咯。期待。。。</p>
+<p>这几天晚上睡觉发梦都老是梦到她们两个，分开这么长时间。宝宝现在都快半岁大了，会用手去抓东西，会认人了。希望回去不要不认得老爸喔。此时此刻，归心似箭阿。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;久别近两个月，后天就要回老婆家接她们母子回广州咯。期待。。。&lt;/p&gt;
+&lt;p&gt;这几天晚上睡觉发梦都老是梦到她们两个，分开这么长时间。宝宝现在都快半岁大了，会用手去抓东西，会认人了。希望回去不要不认得老爸喔。此时此刻，归心似箭阿。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>夜半，点烟抽寂寞</title>
+    <link href="http://iamsonic.net/2011/03/22/smoking-year/"/>
+    <id>http://iamsonic.net/2011/03/22/smoking-year/</id>
+    <published>2011-03-22T15:04:48.000Z</published>
+    <updated>2017-05-22T15:13:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知不觉地，也是12年的老烟民了。</p>
+<p>那是个叛逆的年龄，高中的时候，受损友引诱，这东西一拿起来，就没停过手，最初的那个损友A，5年前已经成功戒掉。刚开始的时候，很排斥。清楚的记得，看到朋友A拿烟抽的时候，我的第一感觉是，这是什么人阿？还抽烟，我怎么会与这样的不良少年为友。后来在他的引诱下，身边几个要好的朋友都被拉下水了。而我也跟着悲剧了。。。</p>
+<p>尼古丁底是怎么样的感觉，我也难形容，确实是毒药，而且心瘾难戒。戒过几次，最长一次也维持只是3个月而已，记得那个时候，老婆对我说，你居然可以3个月不抽，真不容易阿。那你人生还有什么乐趣？当时，我真的无言以对。确实，工作后，我几乎没有什么爱好。球也没踢了。游戏也没玩了。电影电视剧也少看了，除了工作真的很少户外的活动。或者我的圈子太窄了。。。抽烟也就是我现在唯一的小爱好了。其实我抽得并不多，量控制得很好，一天不超5根，如果有时有应酬，另当别论。现在抽烟的时候更多的是在饭后，无聊时打发时间。</p>
+<p>有人说，戒烟最关键是，要下足够的决心，我觉得这只对一半。另外一半，我觉得是理由，每个人戒烟都有他的理由，可能是家人强烈反对，可能是考虑到要繁育后代，可能是由于身体的原因。理由就好像事情一件事或者一个项目的蓝图，而决心，就是实现这个蓝图的执行力。缺一不可。如果能给我一个好的蓝图，我能做到。你呢？</p>
+<blockquote>
+<p>后记：2015年，在阅读完《<a href="https://book.douban.com/subject/3318174/" target="_blank" rel="external">这书能让你戒烟</a>》后，成功戒除16年的烟，并推荐给身边的同事朋友，并且帮忙他们成功戒烟。如果想戒烟又还在徘徊给自己找理由和决心的朋友，推荐阅读！</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不知不觉地，也是12年的老烟民了。&lt;/p&gt;
+&lt;p&gt;那是个叛逆的年龄，高中的时候，受损友引诱，这东西一拿起来，就没停过手，最初的那个损友A，5年前已经成功戒掉。刚开始的时候，很排斥。清楚的记得，看到朋友A拿烟抽的时候，我的第一感觉是，这是什么人阿？还抽烟，我怎么会与这样的不良少年为友。后来在他的引诱下，身边几个要好的朋友都被拉下水了。而我也跟着悲剧了。。。&lt;/p&gt;
+&lt;p&gt;尼古丁底是怎么样的感觉，我也难形容，确实是毒药，而且心瘾难戒。戒过几次，最长一次也维持只是3个月而已，记得那个时候，老婆对我说，你居然可以3个月不抽，真不容易阿。那你人生还有什么乐趣？当时，我真的无言以对。确实，工作后，我几乎没有什么爱好。球也没踢了。游戏也没玩了。电影电视剧也少看了，除了工作真的很少户外的活动。或者我的圈子太窄了。。。抽烟也就是我现在唯一的小爱好了。其实我抽得并不多，量控制得很好，一天不超5根，如果有时有应酬，另当别论。现在抽烟的时候更多的是在饭后，无聊时打发时间。&lt;/p&gt;
+&lt;p&gt;有人说，戒烟最关键是，要下足够的决心，我觉得这只对一半。另外一半，我觉得是理由，每个人戒烟都有他的理由，可能是家人强烈反对，可能是考虑到要繁育后代，可能是由于身体的原因。理由就好像事情一件事或者一个项目的蓝图，而决心，就是实现这个蓝图的执行力。缺一不可。如果能给我一个好的蓝图，我能做到。你呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后记：2015年，在阅读完《&lt;a href=&quot;https://book.douban.com/subject/3318174/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这书能让你戒烟&lt;/a&gt;》后，成功戒除16年的烟，并推荐给身边的同事朋友，并且帮忙他们成功戒烟。如果想戒烟又还在徘徊给自己找理由和决心的朋友，推荐阅读！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>亲身经历超市抢“盐”风波</title>
     <link href="http://iamsonic.net/2011/03/17/grab-salt/"/>
     <id>http://iamsonic.net/2011/03/17/grab-salt/</id>
     <published>2011-03-17T13:23:47.000Z</published>
-    <updated>2017-05-22T11:26:25.000Z</updated>
+    <updated>2017-05-22T15:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>日本的大地震，福岛的核泄露，再一次让中国人恐慌。前阵日本牛奶全城抢购，再到电子零件涨价，再到盐产品被波及，没完没了…</p>
 <p>昨天晚上外出归来，路过婴儿店，本想为宝宝买几包好的尿片，家里的快用完了，到店里被告知日本产“花王”尿片全部短货，心想，日本奶粉被抢断货也就算了，日本尿片也没有了。没办法，小日本的产品就是好，用过就知道。沮丧之极，回到家中。又接到亲人电话，问楼下周围边还能买到盐吗？赶快去买，现在很多地方都在抢。我问为什么盐会买不到？“原来怕受日本福岛核心电站放射性物质波及，海水扩散时物质被飘移到中国沿海，到时海产盐就会有大量的放射性物质遗留在里面，食用会对身体造成危害。最好先屯积一年左右的食盐量。老家现在市面上都买不到了盐。”当时听了我就在想，就算有危害，盐产品出产时都会质量审核，不至于要先屯积一年的量了，电话里也没多说，我决定去楼下超市看看这边是不是也没有盐卖了。出门前我看了一下家里盐剩下半包了，如果超市有得卖，就先买几包放着。</p>
@@ -304,7 +358,7 @@
     <link href="http://iamsonic.net/2011/03/15/need-blog/"/>
     <id>http://iamsonic.net/2011/03/15/need-blog/</id>
     <published>2011-03-15T12:22:30.000Z</published>
-    <updated>2017-05-22T11:26:13.000Z</updated>
+    <updated>2017-05-22T15:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>身边的同行、朋友问及我有没有自己的博客，答曰：”无”！马上投来异样的眼光。似乎很不可思议，难道IT人就必须有自己的博客吗？</p>
 <p>05年博客开始 流行的时候，偶也潮了一回，用LBS搭建了一个人的博客。刚开始主要发布一些牛B的，好看转贴，极少原创，也有一些私人的记录。渐渐地，我发现博客几乎都没有流量，评论倒是很多，但都是些推广的垃圾评论。缺乏交流，由于耐不住寂寞，最终服务器到期时数据全部丢失了博客也就关闭了。</p>
