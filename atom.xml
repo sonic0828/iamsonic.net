@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iamsonic.net/"/>
-  <updated>2017-05-20T23:53:52.000Z</updated>
+  <updated>2017-05-22T07:12:12.000Z</updated>
   <id>http://iamsonic.net/</id>
   
   <author>
@@ -16,43 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://iamsonic.net/2017/05/21/hello-world/"/>
-    <id>http://iamsonic.net/2017/05/21/hello-world/</id>
-    <published>2017-05-20T23:53:52.000Z</published>
-    <updated>2017-05-20T23:53:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo generate&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>new-blog</title>
+    <title>iamsonic博客复活</title>
     <link href="http://iamsonic.net/2017/05/20/new-blog/"/>
     <id>http://iamsonic.net/2017/05/20/new-blog/</id>
     <published>2017-05-20T08:45:23.000Z</published>
-    <updated>2017-05-20T23:53:52.000Z</updated>
+    <updated>2017-05-22T07:12:12.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了Hexo搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
 ]]></content>
@@ -68,31 +36,93 @@
   </entry>
   
   <entry>
-    <title>just-test</title>
-    <link href="http://iamsonic.net/2017/05/20/just-test/"/>
-    <id>http://iamsonic.net/2017/05/20/just-test/</id>
-    <published>2017-05-20T00:20:15.000Z</published>
-    <updated>2017-05-20T23:53:52.000Z</updated>
+    <title>new-gulp4</title>
+    <link href="http://iamsonic.net/2016/03/10/new-gulp4/"/>
+    <id>http://iamsonic.net/2016/03/10/new-gulp4/</id>
+    <published>2016-03-10T06:25:11.000Z</published>
+    <updated>2017-05-22T07:12:12.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="hehehehe"><a href="#hehehehe" class="headerlink" title="hehehehe"></a>hehehehe</h3><p>hello hahahah<br>asdfasdfljas<br>asdfasdf</p>
+    <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png" alt=""><br>gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 <code>gulp.series()</code> 和 <code>gulp.parallel()</code> 方法用于组合任务，多个任务执行时，<strong>可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。</strong></p>
+<p>##全新的 gulp.task()<br>从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png" alt=""></p>
+<p>这样的任务写法在 Gulp 4.0 下要进行修改，要改成这样：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code2.png" alt=""></p>
+<p>对比一下代码，这里有两点要强调说明一下：</p>
 <ul>
-<li>你说呢</li>
-<li>你说呢</li>
-<li>你说呢</li>
-<li>你说呢</li>
+<li>为什么多了个<code>return</code>，是因为目前的任务组合可同步，也可异步，所以整个任务定义函数要做为一个返回值来设定，<a href="https://github.com/gulpjs/gulp/blob/4.0/docs/API.md#async-support" title="详细请看文档" target="_blank" rel="external">详细请看文档</a></li>
+<li><code>gulp.series()</code>里的任务是同步执行的，<code>gulp.parallel()</code>里的任务是异步执行的</li>
 </ul>
+<blockquote>
+<p><strong>所以之前3.x的<code>gulpfile.js</code> 切换到4.0版本是要修改一下的，否则执行时会报错。</strong></p>
+</blockquote>
+<p>新的gulp.task 返回接受两种新的方式  <code>Return a child process</code>     <code>Return a RxJS observable</code>  这非常方便插件开发者进行 gulp插件定制。<br><strong>Return a child process</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'clean'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> spawn(<span class="string">'rm'</span>, [<span class="string">'-rf'</span>, path.join(__dirname, <span class="string">'build'</span>)]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>Return a RxJS observable</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Observable = <span class="built_in">require</span>(<span class="string">'rx'</span>).Observable;</div><div class="line"></div><div class="line">gulp.task(<span class="string">'sometask'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> Observable.return(<span class="number">42</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>##gulp同步执行任务<br>4.0之前 gulpr任务的执行都是异步的，但总有些场景是需要并行的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">"build"</span>, [<span class="string">"clean"</span>, <span class="string">"js-min"</span>, <span class="string">"img-min"</span>, <span class="string">"css-min"</span>, <span class="string">"html"</span>, <span class="string">"zip"</span>]);</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">[10:22:54] Starting <span class="string">'clean'</span>...</div><div class="line">[10:22:54] Starting <span class="string">'js-min'</span>...</div><div class="line">[10:22:54] Starting <span class="string">'img-min'</span>...</div><div class="line">[10:22:54] Starting <span class="string">'css-min'</span>...</div><div class="line">[10:22:54] Starting <span class="string">'html'</span>...</div><div class="line">[10:22:54] Starting <span class="string">'zip'</span>...</div><div class="line">[10:22:54] Finished <span class="string">'css-min'</span> after 88 ms</div><div class="line">[10:22:54] Finished <span class="string">'html'</span> after 86 ms</div><div class="line">[10:22:54] Finished <span class="string">'clean'</span> after 255 ms</div><div class="line">[10:22:54] Finished <span class="string">'zip'</span> after 549 ms</div><div class="line">[10:22:55] Finished <span class="string">'js-min'</span> after 1.5 s</div><div class="line">[10:22:56] gulp-imagemin: Minified 15 images (saved 337.01 kB - 30.8%)</div><div class="line">[10:22:56] Finished <span class="string">'img-min'</span> after 2.46 s</div><div class="line">[10:22:56] Starting <span class="string">'build'</span>...</div><div class="line">[10:22:56] Finished <span class="string">'build'</span> after 14 μs</div></pre></td></tr></table></figure>
+<blockquote>
+<p>ToT!!!这样的任务执行完全错乱了，执行zip压缩时，我前面的js压缩，图片压缩等文件还没完整。这个压缩包生成后文件不完整呀！我想要的是：圆括号里面串行，中括号里面并行。如下：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="string">"clean"</span>, [<span class="string">"js-min"</span>,<span class="string">"img-min"</span>, <span class="string">"css-min"</span>, <span class="string">"html"</span>], <span class="string">"zip"</span>)</div></pre></td></tr></table></figure>
+<p><strong>有什么办法可以解决？</strong></p>
+<ul>
+<li>标注依赖，但有时要处理多个依赖，依赖与依赖之间的依赖（麻烦，不推荐）</li>
+<li>使用插件<a href="https://github.com/teambition/gulp-sequence" title="gulp-sequence" target="_blank" rel="external">gulp-sequence</a> （不想升4.0 但有同步执行的需求时可用）</li>
+<li>使用gulp4.0 的 <code>gulp.series()</code>（超好用，推荐）</li>
+</ul>
+<p>使用gulp4.0的新API，我们可以把任务改成如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">"build"</span>, gulp.series(<span class="string">"clean"</span>,  gulp.parallel(<span class="string">"js-min"</span>,<span class="string">"img-min"</span>, <span class="string">"css-min"</span>, <span class="string">"html"</span>), <span class="string">"zip"</span>));</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>gulp.series()</code>里的任务是同步执行的，<code>gulp.parallel()</code>里的任务是异步执行的。</p>
+</blockquote>
+<p>再执行一次gulp build看看效果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">[15:36:53] Starting <span class="string">'build'</span>...</div><div class="line">[15:36:53] Starting <span class="string">'clean'</span>...</div><div class="line">[15:36:54] Finished <span class="string">'clean'</span> after 24 ms</div><div class="line">[15:36:55] Starting <span class="string">'parallel'</span>...</div><div class="line">[15:36:55] Starting <span class="string">'js-min'</span>...</div><div class="line">[15:36:55] Starting <span class="string">'img-min'</span>...</div><div class="line">[15:36:55] Starting <span class="string">'css-min'</span>...</div><div class="line">[15:36:55] Starting <span class="string">'html'</span>...</div><div class="line">[15:36:55] Finished <span class="string">'js-min'</span> after 88 s</div><div class="line">[15:36:55] Finished <span class="string">'css-min'</span> after 67 ms</div><div class="line">[15:36:55] Finished <span class="string">'html'</span> after 67 ms</div><div class="line">[15:36:57] gulp-imagemin: Minified 15 images (saved 337.01 kB - 30.8%)</div><div class="line">[15:36:57] Finished <span class="string">'img-min'</span> after 2.25 s</div><div class="line">[15:36:57] Finished <span class="string">'parallel'</span> after 2.25 s</div><div class="line">[15:36:57] Starting <span class="string">'zip'</span>...</div><div class="line">[15:36:57] Finished <span class="string">'zip'</span> after 63 ms</div><div class="line">[15:36:57] Finished <span class="string">'build'</span> after 3.62 s</div></pre></td></tr></table></figure></p>
+<p>太棒了，这才是我 想要的！</p>
+<p>##gulp 4.0安装办法</p>
+<p>####如果之前安装过gulp 4.0前的版本，需把原来的旧版本卸载掉，执行下面代码，没装过则跳过此步骤<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 卸载全局的 gulp</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm uninstall <span class="string">'gulp-cli'</span> -g</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm uninstall <span class="string">'gulp'</span> -g</span></div><div class="line"><span class="meta">#</span><span class="bash"> 到项目目录里卸载本地的 gulp</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm uninstall <span class="string">'gulp'</span> --save-dev</span></div></pre></td></tr></table></figure></p>
+<p>####开始全新安装gulp 4.0<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 安装全局的 gulp 4.0</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm install <span class="string">'gulpjs/gulp-cli'</span> -g</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm install <span class="string">'gulpjs/gulp#4.0'</span> -g</span></div><div class="line"><span class="meta">#</span><span class="bash"> 安装本地的 gulp 4.0</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm install <span class="string">'gulpjs/gulp#4.0'</span> --save-dev</span></div></pre></td></tr></table></figure></p>
+<p>##变新日志</p>
+<p>我们来瞄一瞄4.0新版有什么不同（<a href="https://github.com/gulpjs/gulp/blob/4.0/CHANGELOG.md" title="CHANGELOG.md" target="_blank" rel="external">CHANGELOG.md</a>）：</p>
+<p>###任务系统变化（基于 bach，替换掉了原先基于 orchestrator 的任务系统）</p>
+<ul>
+<li>移除 <code>gulp.reset</code></li>
+<li><code>gulp.task</code> 不再支持三个参数的用法</li>
+<li><code>gulp.task</code> 用字符串注册的任务必须是直接在命令行中调用的任务</li>
+<li><code>gulp.task</code> 可以接受单参数语法，这个参数必须是一个命名函数，函数名会被作为任务名</li>
+<li>添加了 <code>gulp.series</code> 和 <code>gulp.parallel</code> 方法用于组合任务</li>
+<li>添加了 <code>gulp.tree</code> 方法用于获取任务树，传入 <code>{ deep: true }</code> 参数可以得到一个 <code>archy</code> 兼容的节点列表</li>
+<li>添加了 <code>gulp.registry</code> 方法以定制注册表。</li>
+</ul>
+<p>###命令行变化</p>
+<ul>
+<li>将命令行分离出来成为一个独立模块，以便节约带宽/空间。用 <code>npm install gulp -g</code> 或 <code>npm install gulp-cli -g</code> 都可以安装命令行，只是 <code>gulp-cli</code> 不包含模块代码所以比较小</li>
+<li>命令行添加了 <code>--tasks-json</code> 参数，可以导出整个任务树以供他用</li>
+<li>命令行添加了 <code>—verify</code> 参数用以检查 <code>package.json</code> 中是否包含黑名单插件（违背准则而被禁入官方插件列表的可怜娃们）。</li>
+</ul>
+<p>###文件系统变化</p>
+<ul>
+<li>添加了 <code>gulp.symlink</code> 方法，功能和 <code>gulp.dest</code> 一致，不过是以软链接的方式</li>
+<li><code>gulp.dest</code> 和 <code>gulp.symlink</code> 方法添加了 <code>dirMode</code> 参数允许对目标目录更好地控制</li>
+<li><code>gulp.src</code> 接收的文件匹配字符串会顺序解释，所以你可以写成这样 <code>gulp.src([&#39;*.js&#39;, &#39;!b*.js&#39;, &#39;bad.js’])</code>（排除所有以 b 开头的 JS 文件但是除了 bad.js）</li>
+<li><code>gulp.src</code> 性能进行极大的改进</li>
+<li><code>gulp.src</code> 方法添加了 <code>since</code> 选项，筛选在特定时间点之后修改过的文件（用于增量编译）</li>
+<li><code>gulp.dest</code> 方法添加了 <code>overwrite</code> 选项 允许你启用或禁用现有的文件覆盖</li>
+</ul>
+<p>##参考<br><a href="https://segmentfault.com/a/1190000002528547" target="_blank" rel="external">https://segmentfault.com/a/1190000002528547</a><br><a href="http://www.gulpjs.com.cn/docs/recipes/running-tasks-in-series/" target="_blank" rel="external">http://www.gulpjs.com.cn/docs/recipes/running-tasks-in-series/</a><br><a href="http://zhangruojun.com/gulpshun-xu-zhi-xing-ren-wu/" target="_blank" rel="external">http://zhangruojun.com/gulpshun-xu-zhi-xing-ren-wu/</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;hehehehe&quot;&gt;&lt;a href=&quot;#hehehehe&quot; class=&quot;headerlink&quot; title=&quot;hehehehe&quot;&gt;&lt;/a&gt;hehehehe&lt;/h3&gt;&lt;p&gt;hello hahahah&lt;br&gt;asdfasdfljas&lt;br&gt;asdfasdf&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 &lt;code&gt;gulp.series()&lt;/code&gt; 和 &lt;code&gt;gulp.parallel()&lt;/code&gt; 方法用于组合任务，多个任务执行时，&lt;strong&gt;可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;##全新的 gulp.task()&lt;br&gt;从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：&lt;br&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这样的任务写法在 Gulp 4.0 下要进行修改，要改成这样：&lt;br&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;对比一下代码，这里有两点要强调说明一下：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;你说呢&lt;/li&gt;
-&lt;li&gt;你说呢&lt;/li&gt;
-&lt;li&gt;你说呢&lt;/li&gt;
-&lt;li&gt;你说呢&lt;/li&gt;
+&lt;li&gt;为什么多了个&lt;code&gt;return&lt;/code&gt;，是因为目前的任务组合可同步，也可异步，所以整个任务定义函数要做为一个返回值来设定，&lt;a href=&quot;https://github.com/gulpjs/gulp/blob/4.0/docs/API.md#async-support&quot; title=&quot;详细请看文档&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详细请看文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gulp.series()&lt;/code&gt;里的任务是同步执行的，&lt;code&gt;gulp.parallel()&lt;/code&gt;里的任务是异步执行的&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;所以之前3.x的&lt;code&gt;gulpfile.js&lt;/code&gt; 切换到4.0版本是要修改一下的，否则执行时会报错。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新的gulp.task 返回接受两种新的方式  &lt;code&gt;Return a child process&lt;/code&gt;     &lt;code&gt;Return a RxJS observable&lt;/code&gt;  这非常方便插件开发者进行 gulp插件定制。&lt;br&gt;&lt;strong&gt;Return a child process&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;clean&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; spawn(&lt;span class=&quot;string&quot;&gt;&#39;rm&#39;&lt;/span&gt;, [&lt;span class=&quot;string&quot;&gt;&#39;-rf&#39;&lt;/span&gt;, path.join(__dirname, &lt;span class=&quot;string&quot;&gt;&#39;build&#39;&lt;/span&gt;)]);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Return a RxJS observable&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Observable = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;rx&#39;&lt;/span&gt;).Observable;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;sometask&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Observable.return(&lt;span class=&quot;number&quot;&gt;42&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;##gulp同步执行任务&lt;br&gt;4.0之前 gulpr任务的执行都是异步的，但总有些场景是需要并行的&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&quot;build&quot;&lt;/span&gt;, [&lt;span class=&quot;string&quot;&gt;&quot;clean&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;js-min&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;img-min&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;css-min&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;html&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;zip&quot;&lt;/span&gt;]);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Starting &lt;span class=&quot;string&quot;&gt;&#39;clean&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Starting &lt;span class=&quot;string&quot;&gt;&#39;js-min&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Starting &lt;span class=&quot;string&quot;&gt;&#39;img-min&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Starting &lt;span class=&quot;string&quot;&gt;&#39;css-min&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Starting &lt;span class=&quot;string&quot;&gt;&#39;html&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Starting &lt;span class=&quot;string&quot;&gt;&#39;zip&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Finished &lt;span class=&quot;string&quot;&gt;&#39;css-min&#39;&lt;/span&gt; after 88 ms&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Finished &lt;span class=&quot;string&quot;&gt;&#39;html&#39;&lt;/span&gt; after 86 ms&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Finished &lt;span class=&quot;string&quot;&gt;&#39;clean&#39;&lt;/span&gt; after 255 ms&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:54] Finished &lt;span class=&quot;string&quot;&gt;&#39;zip&#39;&lt;/span&gt; after 549 ms&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:55] Finished &lt;span class=&quot;string&quot;&gt;&#39;js-min&#39;&lt;/span&gt; after 1.5 s&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:56] gulp-imagemin: Minified 15 images (saved 337.01 kB - 30.8%)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:56] Finished &lt;span class=&quot;string&quot;&gt;&#39;img-min&#39;&lt;/span&gt; after 2.46 s&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:56] Starting &lt;span class=&quot;string&quot;&gt;&#39;build&#39;&lt;/span&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[10:22:56] Finished &lt;span class=&quot;string&quot;&gt;&#39;build&#39;&lt;/span&gt; after 14 μs&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
