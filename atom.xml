@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iamsonic.net/"/>
-  <updated>2017-05-22T15:14:45.000Z</updated>
+  <updated>2017-05-22T23:01:38.000Z</updated>
   <id>http://iamsonic.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://iamsonic.net/2017/05/20/new-blog/"/>
     <id>http://iamsonic.net/2017/05/20/new-blog/</id>
     <published>2017-05-20T08:45:23.000Z</published>
-    <updated>2017-05-22T15:14:45.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
 ]]></content>
@@ -40,7 +40,7 @@
     <link href="http://iamsonic.net/2017/03/07/internet-man-practice/"/>
     <id>http://iamsonic.net/2017/03/07/internet-man-practice/</id>
     <published>2017-03-07T10:57:59.000Z</published>
-    <updated>2017-05-22T15:04:24.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><strong>“谨以此文，献给即将踏入35岁的自己，互联网从业12年之际。”</strong></p>
@@ -180,7 +180,7 @@
     <link href="http://iamsonic.net/2016/03/10/new-gulp4/"/>
     <id>http://iamsonic.net/2016/03/10/new-gulp4/</id>
     <published>2016-03-10T06:25:11.000Z</published>
-    <updated>2017-05-22T15:04:24.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png" alt=""><br>gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 <code>gulp.series()</code> 和 <code>gulp.parallel()</code> 方法用于组合任务，多个任务执行时，<strong>可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。</strong></p>
 <p>##全新的 gulp.task()<br>从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png" alt=""></p>
@@ -270,11 +270,93 @@
   </entry>
   
   <entry>
+    <title>富兰克林的十三种品德</title>
+    <link href="http://iamsonic.net/2012/09/09/franklin-13/"/>
+    <id>http://iamsonic.net/2012/09/09/franklin-13/</id>
+    <published>2012-09-09T06:33:28.000Z</published>
+    <updated>2017-05-23T06:39:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="转给自已，铭记与自勉"><a href="#转给自已，铭记与自勉" class="headerlink" title="转给自已，铭记与自勉"></a>转给自已，铭记与自勉</h3><blockquote>
+<p>一、节制：食不过饱，酒不过量。<br>⑴Temperance: Eat not too dullness; drink not too elevation.</p>
+<p>二、缄默：避免空谈，言必对己或对人有益。<br>⑵Silence: Speak not but what may benefit others or yourself; avoid trifling conversation.</p>
+<p>三、秩序：放东西的地方，做事情的时间要心中有数。<br> ⑶Order: Let all your things have their places; let each part of your business have its time.</p>
+<p>四、决心：该做的一定要做，做就要做好。<br>⑷Resolution: Resolve to perform what you ought; perform without fail what you resolve.</p>
+<p>五、节俭：对人或对己有益才可用钱，决不浪费。<br>⑸Frugality: Make no expense but to do good to others or yourself; i.e.,waste nothing.</p>
+<p>六、勤奋：珍惜光阴，做有益之事，避无谓之举。<br>⑹Industry: Lose no time; be always employ’d in something useful; cut off all unnecessary actions.</p>
+<p>七、真诚：不欺骗，有良知，为人厚道，说话实在。<br>⑺Sincerity: Use no hurtful deceit; think innocently and justly,and,if you speak,speak accordingly</p>
+<p>八、正义：不做不利于人的事，不逃避自己的义务。<br>⑻Justice: Wrong none by doing injuries,or omitting the benefits that are your duty.</p>
+<p>九、中庸：避免走极端，容忍别人给你的伤害，认为是你应该承受之事。<br>⑼Moderation: Avoid extreams; forbear resenting injuries so much as you think they deserve.</p>
+<p>十、整洁：保持身体、衣服和住所的整洁。<br>⑽Cleanliness: Tolerate no uncleanliness in body,cloaths,or habitation</p>
+<p>十一、冷静：不因小事，寻常之事，不可避免之事而慌乱。<br>⑾Tranquility: Be not distuibed at trifles,or at accidents common or unavoidable.</p>
+<p>十二、节欲：少行房事，除非考虑到身体健康或者延续子嗣；不要房事过度，伤害身体或者损害自己或他人的安宁与名誉。<br>⑿Chastity: Rarely use venery but for health or offspring,never to dulness,weakness,or the injury of your own or another’s peace or reputation.</p>
+<p>十三、谦逊：效法耶酥和苏格拉底。<br>⒀Humility: Imitate Jesus and Socrates</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;转给自已，铭记与自勉&quot;&gt;&lt;a href=&quot;#转给自已，铭记与自勉&quot; class=&quot;headerlink&quot; title=&quot;转给自已，铭记与自勉&quot;&gt;&lt;/a&gt;转给自已，铭记与自勉&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;一、节制：食不过饱，酒不过量。&lt;br&gt;⑴Temperance: Eat not too dullness; drink not too elevation.&lt;/p&gt;
+&lt;p&gt;二、缄默：避免空谈，言必对己或对人有益。&lt;br&gt;⑵Silence: Speak not but what may benefit others or yourself; avoid trifling conversation.&lt;/p&gt;
+&lt;p&gt;三、秩序：放东西的地方，做事情的时间要心中有数。&lt;br&gt; ⑶Order: Let all your things have their places; let each part of your business have its time.&lt;/p&gt;
+&lt;p&gt;四、决心：该做的一定要做，做就要做好。&lt;br&gt;⑷Resolution: Resolve to perform what you ought; perform without fail what you resolve.&lt;/p&gt;
+&lt;p&gt;五、节俭：对人或对己有益才可用钱，决不浪费。&lt;br&gt;⑸Frugality: Make no expense but to do good to others or yourself; i.e.,waste nothing.&lt;/p&gt;
+&lt;p&gt;六、勤奋：珍惜光阴，做有益之事，避无谓之举。&lt;br&gt;⑹Industry: Lose no time; be always employ’d in something useful; cut off all unnecessary actions.&lt;/p&gt;
+&lt;p&gt;七、真诚：不欺骗，有良知，为人厚道，说话实在。&lt;br&gt;⑺Sincerity: Use no hurtful deceit; think innocently and justly,and,if you speak,speak accordingly&lt;/p&gt;
+&lt;p&gt;八、正义：不做不利于人的事，不逃避自己的义务。&lt;br&gt;⑻Justice: Wrong none by doing injuries,or omitting the benefits that are your duty.&lt;/p&gt;
+&lt;p&gt;九、中庸：避免走极端，容忍别人给你的伤害，认为是你应该承受之事。&lt;br&gt;⑼Moderation: Avoid extreams; forbear resenting injuries so much as you think they deserve.&lt;/p&gt;
+&lt;p&gt;十、整洁：保持身体、衣服和住所的整洁。&lt;br&gt;⑽Cleanliness: Tolerate no uncleanliness in body,cloaths,or habitation&lt;/p&gt;
+&lt;p&gt;十一、冷静：不因小事，寻常之事，不可避免之事而慌乱。&lt;br&gt;⑾Tranquility: Be not distuibed at trifles,or at accidents common or unavoidable.&lt;/p&gt;
+&lt;p&gt;十二、节欲：少行房事，除非考虑到身体健康或者延续子嗣；不要房事过度，伤害身体或者损害自己或他人的安宁与名誉。&lt;br&gt;⑿Chastity: Rarely use venery but for health or offspring,never to dulness,weakness,or the injury of your own or another’s peace or reputation.&lt;/p&gt;
+&lt;p&gt;十三、谦逊：效法耶酥和苏格拉底。&lt;br&gt;⒀Humility: Imitate Jesus and Socrates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ie hack在某些CSS属性下失效</title>
+    <link href="http://iamsonic.net/2011/06/30/ie-hack-fail/"/>
+    <id>http://iamsonic.net/2011/06/30/ie-hack-fail/</id>
+    <published>2011-06-30T06:32:35.000Z</published>
+    <updated>2017-05-23T06:49:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近项目碰到一个问题，要在CSS里用IE hack取分使用的字体。在IE6-9浏览器下使用宋体，ie9/FF/Safari 使用雅黑字体。按理来讲应该这样写:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Microsoft</span> <span class="selector-tag">YaHei</span>, <span class="selector-tag">YouYuan</span>;</div><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Arial</span>\9; <span class="comment">/* targets ie9 and below*/</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>关于IE Hack可以参考<a href="http://t.qq.com/feiwen8772" target="_blank" rel="external">@码头兄</a>的 <a href="http://www.css88.com/archives/3746" title="IE9的css hack" target="_blank" rel="external">IE9的css hack</a> ）</p>
+</blockquote>
+<p> 结果却是所有游览器都使用了”Arial”字体,也就是说这个”\9″ 的hack失效了，请教了几位同行均没能解决这个问题，有建议用<a href="http://davidbcalhoun.com/tag/ie-hack" target="_blank" rel="external">条件注释</a><br> 的方式，虽然这是一种趋势，往后的页面都会逐渐采用这种方法来做!但这也暴露了css hack在某下CSS属性下会失效这个事实。<br> 于是搜索了一下，找到国外这篇<a href="http://net.tutsplus.com/tutorials/html-css-techniques/quick-tip-how-to-target-ie6-ie7-and-ie8-uniquely-with-4-characters/" target="_blank" rel="external">Quick Tip: How to Target IE6, IE7, and IE8 Uniquely with 4 Characters</a><br> 里面的论坛也有人遇到的一样的问题!</p>
+<p> 使用”\9″对某些css属性作品失效时，要增加<br> <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**</div><div class="line"> “/!important”</div><div class="line">**</div></pre></td></tr></table></figure></p>
+<p>经测试发现，这个方法能解决ie6-8,唯独ie9依然不行，试过对字体加””,修改/!important的位置，都不行，如果有解决ie9的方法。欢迎讨论!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近项目碰到一个问题，要在CSS里用IE hack取分使用的字体。在IE6-9浏览器下使用宋体，ie9/FF/Safari 使用雅黑字体。按理来讲应该这样写:&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:Microsoft&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;YaHei&lt;/span&gt;, &lt;span class=&quot;selector-tag&quot;&gt;YouYuan&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:Arial&lt;/span&gt;\9; &lt;span class=&quot;comment&quot;&gt;/* targets ie9 and below*/&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关于IE Hack可以参考&lt;a href=&quot;http://t.qq.com/feiwen8772&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@码头兄&lt;/a&gt;的 &lt;a href=&quot;http://www.css88.com/archives/3746&quot; title=&quot;IE9的css hack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IE9的css hack&lt;/a&gt; ）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; 结果却是所有游览器都使用了”Arial”字体,也就是说这个”\9″ 的hack失效了，请教了几位同行均没能解决这个问题，有建议用&lt;a href=&quot;http://davidbcalhoun.com/tag/ie-hack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;条件注释&lt;/a&gt;&lt;br&gt; 的方式，虽然这是一种趋势，往后的页面都会逐渐采用这种方法来做!但这也暴露了css hack在某下CSS属性下会失效这个事实。&lt;br&gt; 于是搜索了一下，找到国外这篇&lt;a href=&quot;http://net.tutsplus.com/tutorials/html-css-techniques/quick-tip-how-to-target-ie6-ie7-and-ie8-uniquely-with-4-characters/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Quick Tip: How to Target IE6, IE7, and IE8 Uniquely with 4 Characters&lt;/a&gt;&lt;br&gt; 里面的论坛也有人遇到的一样的问题!&lt;/p&gt;
+&lt;p&gt; 使用”\9″对某些css属性作品失效时，要增加&lt;br&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;**&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; “/!important”&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;**&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;经测试发现，这个方法能解决ie6-8,唯独ie9依然不行，试过对字体加””,修改/!important的位置，都不行，如果有解决ie9的方法。欢迎讨论!&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="ie, font-family" scheme="http://iamsonic.net/tags/ie-font-family/"/>
+    
+  </entry>
+  
+  <entry>
     <title>回家接老婆儿子咯</title>
     <link href="http://iamsonic.net/2011/04/01/take-wife-son/"/>
     <id>http://iamsonic.net/2011/04/01/take-wife-son/</id>
     <published>2011-04-01T15:05:36.000Z</published>
-    <updated>2017-05-22T15:06:27.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>久别近两个月，后天就要回老婆家接她们母子回广州咯。期待。。。</p>
 <p>这几天晚上睡觉发梦都老是梦到她们两个，分开这么长时间。宝宝现在都快半岁大了，会用手去抓东西，会认人了。希望回去不要不认得老爸喔。此时此刻，归心似箭阿。</p>
@@ -296,7 +378,7 @@
     <link href="http://iamsonic.net/2011/03/22/smoking-year/"/>
     <id>http://iamsonic.net/2011/03/22/smoking-year/</id>
     <published>2011-03-22T15:04:48.000Z</published>
-    <updated>2017-05-22T15:13:18.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>不知不觉地，也是12年的老烟民了。</p>
 <p>那是个叛逆的年龄，高中的时候，受损友引诱，这东西一拿起来，就没停过手，最初的那个损友A，5年前已经成功戒掉。刚开始的时候，很排斥。清楚的记得，看到朋友A拿烟抽的时候，我的第一感觉是，这是什么人阿？还抽烟，我怎么会与这样的不良少年为友。后来在他的引诱下，身边几个要好的朋友都被拉下水了。而我也跟着悲剧了。。。</p>
@@ -328,7 +410,7 @@
     <link href="http://iamsonic.net/2011/03/17/grab-salt/"/>
     <id>http://iamsonic.net/2011/03/17/grab-salt/</id>
     <published>2011-03-17T13:23:47.000Z</published>
-    <updated>2017-05-22T15:04:24.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>日本的大地震，福岛的核泄露，再一次让中国人恐慌。前阵日本牛奶全城抢购，再到电子零件涨价，再到盐产品被波及，没完没了…</p>
 <p>昨天晚上外出归来，路过婴儿店，本想为宝宝买几包好的尿片，家里的快用完了，到店里被告知日本产“花王”尿片全部短货，心想，日本奶粉被抢断货也就算了，日本尿片也没有了。没办法，小日本的产品就是好，用过就知道。沮丧之极，回到家中。又接到亲人电话，问楼下周围边还能买到盐吗？赶快去买，现在很多地方都在抢。我问为什么盐会买不到？“原来怕受日本福岛核心电站放射性物质波及，海水扩散时物质被飘移到中国沿海，到时海产盐就会有大量的放射性物质遗留在里面，食用会对身体造成危害。最好先屯积一年左右的食盐量。老家现在市面上都买不到了盐。”当时听了我就在想，就算有危害，盐产品出产时都会质量审核，不至于要先屯积一年的量了，电话里也没多说，我决定去楼下超市看看这边是不是也没有盐卖了。出门前我看了一下家里盐剩下半包了，如果超市有得卖，就先买几包放着。</p>
@@ -358,7 +440,7 @@
     <link href="http://iamsonic.net/2011/03/15/need-blog/"/>
     <id>http://iamsonic.net/2011/03/15/need-blog/</id>
     <published>2011-03-15T12:22:30.000Z</published>
-    <updated>2017-05-22T15:04:24.000Z</updated>
+    <updated>2017-05-22T23:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>身边的同行、朋友问及我有没有自己的博客，答曰：”无”！马上投来异样的眼光。似乎很不可思议，难道IT人就必须有自己的博客吗？</p>
 <p>05年博客开始 流行的时候，偶也潮了一回，用LBS搭建了一个人的博客。刚开始主要发布一些牛B的，好看转贴，极少原创，也有一些私人的记录。渐渐地，我发现博客几乎都没有流量，评论倒是很多，但都是些推广的垃圾评论。缺乏交流，由于耐不住寂寞，最终服务器到期时数据全部丢失了博客也就关闭了。</p>
