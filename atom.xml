@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iamsonic.net/"/>
-  <updated>2017-05-24T06:46:26.000Z</updated>
+  <updated>2017-05-25T06:54:04.000Z</updated>
   <id>http://iamsonic.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://iamsonic.net/2017/05/20/new-blog/"/>
     <id>http://iamsonic.net/2017/05/20/new-blog/</id>
     <published>2017-05-20T08:45:23.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
 ]]></content>
@@ -40,7 +40,7 @@
     <link href="http://iamsonic.net/2017/03/07/internet-man-practice/"/>
     <id>http://iamsonic.net/2017/03/07/internet-man-practice/</id>
     <published>2017-03-07T10:57:59.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><strong>“谨以此文，献给即将踏入35岁的自己，互联网从业12年之际。”</strong></p>
@@ -180,7 +180,7 @@
     <link href="http://iamsonic.net/2016/03/10/new-gulp4/"/>
     <id>http://iamsonic.net/2016/03/10/new-gulp4/</id>
     <published>2016-03-10T06:25:11.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png" alt=""><br>gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 <code>gulp.series()</code> 和 <code>gulp.parallel()</code> 方法用于组合任务，多个任务执行时，<strong>可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。</strong></p>
 <p>##全新的 gulp.task()<br>从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png" alt=""></p>
@@ -270,11 +270,69 @@
   </entry>
   
   <entry>
+    <title>前端工作流程自动化—PS脚本自动化(Photoshop Scripting)</title>
+    <link href="http://iamsonic.net/2014/11/18/automate-ps-scripts/"/>
+    <id>http://iamsonic.net/2014/11/18/automate-ps-scripts/</id>
+    <published>2014-11-18T11:58:21.000Z</published>
+    <updated>2017-05-25T12:10:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/4.png" alt=""><br>提到PS的自动化，大家最先想到的应该是“录制动作”，但“录制动作”只能做一些模式非常固定的重复事情，比如对图片批量地加上水印，修改大小并保存这类操作。今天介绍的是PS脚本，相对于“录制动作”，它具备下面几点优势：</p>
+<ol>
+<li><strong>支持变量的使用</strong><br>动作无法使用变量，它只是忠实地记录了用户的操作，播放动作的时候也只能机械地重现这一操作过程。</li>
+<li><strong>流程控制</strong><br>脚本可以通过分支语句对实际情况进行逻辑判断，然后选择不同的流程。</li>
+<li><strong>同时操控多个应用程序</strong><br>可以在支持脚本的应用程序（如PS、AI、AE、BR）之间传递相关信息，进而同时操控这些应用程序</li>
+</ol>
+<p>目前PS支持三种脚本语言，分别是<code>Apple Script</code>、<code>VBscript</code>、<code>JavaScript</code>。<code>Apple Script</code>只能在MAC平台上使用，<code>VBscript</code>只能在WINDOWS平台上使用，而<code>JavaScript</code>则是跨平台的。Adobe根据CS平台各软件的实际情况对JavaScript的功能进行了扩展，开发出了扩展版的JavaScript（即ExtandScript），相应脚本文件的扩展名为 .jsx 。PS自带的脚本的脚本可以在 PS菜单 =》 文件=》脚本 里找到。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/5.png" alt=""></p>
+<p>这里通过两个例子让大家对PS脚本有大概的了解：</p>
+<h3 id="例子1-自动导出所有图片"><a href="#例子1-自动导出所有图片" class="headerlink" title="例子1 - 自动导出所有图片"></a>例子1 - 自动导出所有图片</h3><p><strong>【功能介绍】</strong><br>将来psd文件里所有图层一个一个倒出成图片，按图层名进行图片文件命名。可设置文件名前缀，图像类型。</p>
+<p><strong>【功能截图】</strong><br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/6.png" alt=""></p>
+<h3 id="例子2-自动生成辅助线"><a href="#例子2-自动生成辅助线" class="headerlink" title="例子2 - 自动生成辅助线**"></a>例子2 - 自动生成辅助线**</h3><p><strong>【功能介绍】</strong></p>
+<ul>
+<li>接受用户输入的列数字</li>
+<li>根据当前文档尺寸，生成平均宽度的垂直辅助线</li>
+</ul>
+<p><strong>【功能截图】</strong><br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/7.gif" alt=""></p>
+<p><strong>【制作步骤】</strong></p>
+<ol>
+<li>新建1个 CreateGuideLine.jsx 文件</li>
+<li>存放在 {PS安装目录}\Presets\Scripts\</li>
+<li>重启PS，在菜单 文件-&gt; 脚本  即可看到新增的脚本CreateGuideLine</li>
+</ol>
+<p><strong>【代码浏览】</strong><br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/8.png" alt=""></p>
+<p><strong>参考链接:</strong><br> Adobe Photoshop Scripting<br> <a href="http://www.adobe.com/cn/devnet/photoshop/scripting.html" target="_blank" rel="external"><span style="text-decoration: underline;">http://www.adobe.com/cn/devnet/photoshop/scripting.html<span style="text-decoration: underline;"></span></span></a><br> Introduction To Photoshop Scripting<br> <a href="http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/" target="_blank" rel="external"><span style="text-decoration: underline;">http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/</span></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/4.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;提到PS的自动化，大家最先想到的应该是“录制动作”，但“录制动作”只能做一些模式非常固定的重复事情，比如对图片批量地加上水印，修改大小并保存这类操作。今天介绍的是PS脚本，相对于“录制动作”，它具备下面几点优势：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;支持变量的使用&lt;/strong&gt;&lt;br&gt;动作无法使用变量，它只是忠实地记录了用户的操作，播放动作的时候也只能机械地重现这一操作过程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流程控制&lt;/strong&gt;&lt;br&gt;脚本可以通过分支语句对实际情况进行逻辑判断，然后选择不同的流程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;同时操控多个应用程序&lt;/strong&gt;&lt;br&gt;可以在支持脚本的应用程序（如PS、AI、AE、BR）之间传递相关信息，进而同时操控这些应用程序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;目前PS支持三种脚本语言，分别是&lt;code&gt;Apple Script&lt;/code&gt;、&lt;code&gt;VBscript&lt;/code&gt;、&lt;code&gt;JavaScript&lt;/code&gt;。&lt;code&gt;Apple Script&lt;/code&gt;只能在MAC平台上使用，&lt;code&gt;VBscript&lt;/code&gt;只能在WINDOWS平台上使用，而&lt;code&gt;JavaScript&lt;/code&gt;则是跨平台的。Adobe根据CS平台各软件的实际情况对JavaScript的功能进行了扩展，开发出了扩展版的JavaScript（即ExtandScript），相应脚本文件的扩展名为 .jsx 。PS自带的脚本的脚本可以在 PS菜单 =》 文件=》脚本 里找到。&lt;br&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这里通过两个例子让大家对PS脚本有大概的了解：&lt;/p&gt;
+&lt;h3 id=&quot;例子1-自动导出所有图片&quot;&gt;&lt;a href=&quot;#例子1-自动导出所有图片&quot; class=&quot;headerlink&quot; title=&quot;例子1 - 自动导出所有图片&quot;&gt;&lt;/a&gt;例子1 - 自动导出所有图片&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;【功能介绍】&lt;/strong&gt;&lt;br&gt;将来psd文件里所有图层一个一个倒出成图片，按图层名进行图片文件命名。可设置文件名前缀，图像类型。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【功能截图】&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/6.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;例子2-自动生成辅助线&quot;&gt;&lt;a href=&quot;#例子2-自动生成辅助线&quot; class=&quot;headerlink&quot; title=&quot;例子2 - 自动生成辅助线**&quot;&gt;&lt;/a&gt;例子2 - 自动生成辅助线**&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;【功能介绍】&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接受用户输入的列数字&lt;/li&gt;
+&lt;li&gt;根据当前文档尺寸，生成平均宽度的垂直辅助线&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="automate,workflow,ps,script" scheme="http://iamsonic.net/tags/automate-workflow-ps-script/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Node.js + MongoDB 构建Web应用</title>
     <link href="http://iamsonic.net/2014/09/24/node-mongodb-webapp/"/>
     <id>http://iamsonic.net/2014/09/24/node-mongodb-webapp/</id>
     <published>2014-09-24T05:45:49.000Z</published>
-    <updated>2017-05-25T06:51:56.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>2013下半年在做中心【ideas需求管理系统】的Beta版本时，在当时缺乏开发人力的情况下，身兼多职，尝试用 Node.js+MongoDB来做平台的构建，由于当时也是第一次接触Express和MongoDB，平时日常的需求又狂轰乱炸，只能利用平时中午少撸一发“德玛西亚”的时间（小撸怡情，大撸伤身）及周未攒出来的宝贵时间，现学现用。系统在2013年下半年的11月份成功上线，供中心所有重构记录需求，生成周报，为【ideas需求管理系统】奠定基础。时及今日，给大家做下分享：<br> <img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/1.jpeg" alt=""></p>
 <p> 对于1个网页重构的同学，使用Node.js来做前后端构建是有一定优势的，因为你可以不用懂PHP，CGI等开发语言就可以一人搞定前后端，完成一套系统的编码构建，当然如果能懂一些自然最好，在解决一些服务器运维问题时，会更加有方向。当然您需要具备简单的Node.js安装，APP执行，读懂报错的能力，还有较好的 javascript编码能力。好吧，序章已经足够长了，下面开始，</p>
@@ -357,7 +415,7 @@
     <link href="http://iamsonic.net/2013/07/15/grunt-intro/"/>
     <id>http://iamsonic.net/2013/07/15/grunt-intro/</id>
     <published>2013-07-15T06:28:39.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/grunt-intro/grunt-1.jpg" alt="blog-img"></p>
 <h2 id="Grunt这货是啥？"><a href="#Grunt这货是啥？" class="headerlink" title="Grunt这货是啥？"></a>Grunt这货是啥？</h2><p>最近很火的前端自动化小工具，基于任务的命令行构建工具 <a href="http://gruntjs.com" target="_blank" rel="external">http://gruntjs.com</a></p>
@@ -472,7 +530,7 @@
     <link href="http://iamsonic.net/2012/09/09/franklin-13/"/>
     <id>http://iamsonic.net/2012/09/09/franklin-13/</id>
     <published>2012-09-09T06:33:28.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="转给自已，铭记与自勉"><a href="#转给自已，铭记与自勉" class="headerlink" title="转给自已，铭记与自勉"></a>转给自已，铭记与自勉</h3><blockquote>
 <p>一、节制：食不过饱，酒不过量。<br>⑴Temperance: Eat not too dullness; drink not too elevation.</p>
@@ -520,7 +578,7 @@
     <link href="http://iamsonic.net/2011/06/30/ie-hack-fail/"/>
     <id>http://iamsonic.net/2011/06/30/ie-hack-fail/</id>
     <published>2011-06-30T06:32:35.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近项目碰到一个问题，要在CSS里用IE hack取分使用的字体。在IE6-9浏览器下使用宋体，ie9/FF/Safari 使用雅黑字体。按理来讲应该这样写:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Microsoft</span> <span class="selector-tag">YaHei</span>, <span class="selector-tag">YouYuan</span>;</div><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Arial</span>\9; <span class="comment">/* targets ie9 and below*/</span></div></pre></td></tr></table></figure></p>
 <blockquote>
@@ -554,7 +612,7 @@
     <link href="http://iamsonic.net/2011/04/01/take-wife-son/"/>
     <id>http://iamsonic.net/2011/04/01/take-wife-son/</id>
     <published>2011-04-01T15:05:36.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>久别近两个月，后天就要回老婆家接她们母子回广州咯。期待。。。</p>
 <p>这几天晚上睡觉发梦都老是梦到她们两个，分开这么长时间。宝宝现在都快半岁大了，会用手去抓东西，会认人了。希望回去不要不认得老爸喔。此时此刻，归心似箭阿。</p>
@@ -576,7 +634,7 @@
     <link href="http://iamsonic.net/2011/03/22/smoking-year/"/>
     <id>http://iamsonic.net/2011/03/22/smoking-year/</id>
     <published>2011-03-22T15:04:48.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>不知不觉地，也是12年的老烟民了。</p>
 <p>那是个叛逆的年龄，高中的时候，受损友引诱，这东西一拿起来，就没停过手，最初的那个损友A，5年前已经成功戒掉。刚开始的时候，很排斥。清楚的记得，看到朋友A拿烟抽的时候，我的第一感觉是，这是什么人阿？还抽烟，我怎么会与这样的不良少年为友。后来在他的引诱下，身边几个要好的朋友都被拉下水了。而我也跟着悲剧了。。。</p>
@@ -608,7 +666,7 @@
     <link href="http://iamsonic.net/2011/03/17/grab-salt/"/>
     <id>http://iamsonic.net/2011/03/17/grab-salt/</id>
     <published>2011-03-17T13:23:47.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>日本的大地震，福岛的核泄露，再一次让中国人恐慌。前阵日本牛奶全城抢购，再到电子零件涨价，再到盐产品被波及，没完没了…</p>
 <p>昨天晚上外出归来，路过婴儿店，本想为宝宝买几包好的尿片，家里的快用完了，到店里被告知日本产“花王”尿片全部短货，心想，日本奶粉被抢断货也就算了，日本尿片也没有了。没办法，小日本的产品就是好，用过就知道。沮丧之极，回到家中。又接到亲人电话，问楼下周围边还能买到盐吗？赶快去买，现在很多地方都在抢。我问为什么盐会买不到？“原来怕受日本福岛核心电站放射性物质波及，海水扩散时物质被飘移到中国沿海，到时海产盐就会有大量的放射性物质遗留在里面，食用会对身体造成危害。最好先屯积一年左右的食盐量。老家现在市面上都买不到了盐。”当时听了我就在想，就算有危害，盐产品出产时都会质量审核，不至于要先屯积一年的量了，电话里也没多说，我决定去楼下超市看看这边是不是也没有盐卖了。出门前我看了一下家里盐剩下半包了，如果超市有得卖，就先买几包放着。</p>
@@ -638,7 +696,7 @@
     <link href="http://iamsonic.net/2011/03/15/need-blog/"/>
     <id>http://iamsonic.net/2011/03/15/need-blog/</id>
     <published>2011-03-15T12:22:30.000Z</published>
-    <updated>2017-05-24T06:46:26.000Z</updated>
+    <updated>2017-05-25T06:54:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>身边的同行、朋友问及我有没有自己的博客，答曰：”无”！马上投来异样的眼光。似乎很不可思议，难道IT人就必须有自己的博客吗？</p>
 <p>05年博客开始 流行的时候，偶也潮了一回，用LBS搭建了一个人的博客。刚开始主要发布一些牛B的，好看转贴，极少原创，也有一些私人的记录。渐渐地，我发现博客几乎都没有流量，评论倒是很多，但都是些推广的垃圾评论。缺乏交流，由于耐不住寂寞，最终服务器到期时数据全部丢失了博客也就关闭了。</p>
