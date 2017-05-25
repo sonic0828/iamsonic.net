@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iamsonic.net/"/>
-  <updated>2017-05-24T02:39:37.000Z</updated>
+  <updated>2017-05-24T06:46:26.000Z</updated>
   <id>http://iamsonic.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://iamsonic.net/2017/05/20/new-blog/"/>
     <id>http://iamsonic.net/2017/05/20/new-blog/</id>
     <published>2017-05-20T08:45:23.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
 ]]></content>
@@ -40,7 +40,7 @@
     <link href="http://iamsonic.net/2017/03/07/internet-man-practice/"/>
     <id>http://iamsonic.net/2017/03/07/internet-man-practice/</id>
     <published>2017-03-07T10:57:59.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><strong>“谨以此文，献给即将踏入35岁的自己，互联网从业12年之际。”</strong></p>
@@ -180,7 +180,7 @@
     <link href="http://iamsonic.net/2016/03/10/new-gulp4/"/>
     <id>http://iamsonic.net/2016/03/10/new-gulp4/</id>
     <published>2016-03-10T06:25:11.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png" alt=""><br>gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 <code>gulp.series()</code> 和 <code>gulp.parallel()</code> 方法用于组合任务，多个任务执行时，<strong>可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。</strong></p>
 <p>##全新的 gulp.task()<br>从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png" alt=""></p>
@@ -270,11 +270,94 @@
   </entry>
   
   <entry>
+    <title>Node.js + MongoDB 构建Web应用</title>
+    <link href="http://iamsonic.net/2014/09/24/node-mongodb-webapp/"/>
+    <id>http://iamsonic.net/2014/09/24/node-mongodb-webapp/</id>
+    <published>2014-09-24T05:45:49.000Z</published>
+    <updated>2017-05-25T06:51:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2013下半年在做中心【ideas需求管理系统】的Beta版本时，在当时缺乏开发人力的情况下，身兼多职，尝试用 Node.js+MongoDB来做平台的构建，由于当时也是第一次接触Express和MongoDB，平时日常的需求又狂轰乱炸，只能利用平时中午少撸一发“德玛西亚”的时间（小撸怡情，大撸伤身）及周未攒出来的宝贵时间，现学现用。系统在2013年下半年的11月份成功上线，供中心所有重构记录需求，生成周报，为【ideas需求管理系统】奠定基础。时及今日，给大家做下分享：<br> <img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/1.jpeg" alt=""></p>
+<p> 对于1个网页重构的同学，使用Node.js来做前后端构建是有一定优势的，因为你可以不用懂PHP，CGI等开发语言就可以一人搞定前后端，完成一套系统的编码构建，当然如果能懂一些自然最好，在解决一些服务器运维问题时，会更加有方向。当然您需要具备简单的Node.js安装，APP执行，读懂报错的能力，还有较好的 javascript编码能力。好吧，序章已经足够长了，下面开始，</p>
+<p>##【目录】构建一个Web 应用大概会有6大步骤<br> <img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/2.jpeg" alt=""></p>
+<h3 id="1-搭建node-js、npm环境"><a href="#1-搭建node-js、npm环境" class="headerlink" title="1. 搭建node.js、npm环境"></a>1. 搭建node.js、npm环境</h3><p> 提起node.js对于没有开发基础的同学来说，可能会有点排斥，觉得光搞定环境搭建及配置就够头痛的。其实现在的node.js在window环境下的安装已经不像2年前要先装个cybwin后再手动配window全局变量名那么麻烦，真心不难，直接官网下一个.exe文件，装完node.js及npm环境就已经齐了。So Easy!&nbsp;下面介绍一个非常simple的小程序带你了解node和npm环境。</p>
+<h4 id="1-1-确定官方的安装包装上后，确认上node和npm已经装上："><a href="#1-1-确定官方的安装包装上后，确认上node和npm已经装上：" class="headerlink" title="1.1 确定官方的安装包装上后，确认上node和npm已经装上："></a>1.1 确定官方的安装包装上后，确认上node和npm已经装上：</h4><p>终端下敲入<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure></p>
+<p>如果有正常打印出类似的东东则成功<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/3.jpg" alt=""></p>
+<h4 id="1-2-以下是一个simple-node小程序"><a href="#1-2-以下是一个simple-node小程序" class="headerlink" title="1.2 以下是一个simple node小程序"></a>1.2 以下是一个simple node小程序</h4><p> 功能：在当前目录下生成一个 test.txt 的文本文件，并对此文件上填入文字 “Hello Node”.</p>
+<blockquote>
+<p>以下为main.js 内容————————————————————+</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">//（示例）调用File System模块 </span></div><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>); </div><div class="line">fs.writeFile(<span class="string">'test.txt'</span>, <span class="string">'Hello Node'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'It\'s saved!'</span>); </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>运行后结果如下：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/4.jpeg" alt=""></p>
+<h4 id="1-3-npm介绍及使用npm安装node模块"><a href="#1-3-npm介绍及使用npm安装node模块" class="headerlink" title="1.3 npm介绍及使用npm安装node模块**"></a>1.3 npm介绍及使用npm安装node模块**</h4><p>Npm是node.js的包管理器。用于安装、卸载、发布模块等。（像express/mongoose/grunt这些都是nodejs的模块）</p>
+<blockquote>
+<p>以下在终端下运行: ————————————————————+</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 全局安装（当前在系统目录）</div><div class="line"><span class="meta">$</span><span class="bash">npm install express -g</span></div><div class="line"></div><div class="line">// 本地安装（安装在当前目录）</div><div class="line"><span class="meta">$</span><span class="bash">npm install express</span></div></pre></td></tr></table></figure>
+<p>本地安装：如果想在程序中调用该模块，则使用本地安装。<br>全局安装：如果想在命令行中调用该模块，应该使用全局安装。</p>
+<h2 id="2-安装配置MongoDB数据库"><a href="#2-安装配置MongoDB数据库" class="headerlink" title="2. 安装配置MongoDB数据库"></a>2. 安装配置MongoDB数据库</h2><p>MongoDB 是一个基于分布式文件存储的数据库，由C++语言编写，旨在为WEB应用提供可扩展的高性能数据存储解决方案。下面是安排及配置方法：</p>
+<h3 id="2-1-先从官网下载系统文件（http-www-mongodb-org-downloads）并解压缩文件。"><a href="#2-1-先从官网下载系统文件（http-www-mongodb-org-downloads）并解压缩文件。" class="headerlink" title="2.1 先从官网下载系统文件（http://www.mongodb.org/downloads）并解压缩文件。"></a>2.1 先从官网下载系统文件（<a href="http://www.mongodb.org/downloads" target="_blank" rel="external">http://www.mongodb.org/downloads</a>）并解压缩文件。</h3><p>将压缩包解压，在D盘创建文件夹MongoDB,将压缩包中所有的.exe文件拷到D:MongoDB文件夹中。 </p>
+<h3 id="2-2-建立工作目录。"><a href="#2-2-建立工作目录。" class="headerlink" title="2.2 建立工作目录。 　　"></a>2.2 建立工作目录。 　　</h3><ul>
+<li>1、建立数据存放目录&nbsp;&nbsp;D:\mongodb\data 　　</li>
+<li>2、建立日志文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D:\mongodb\log\mongodb.log </li>
+</ul>
+<h3 id="2-3-设置系统变量。为了方便从控制台中管理mongodb，不用每次都进入到D-MongoDB中。"><a href="#2-3-设置系统变量。为了方便从控制台中管理mongodb，不用每次都进入到D-MongoDB中。" class="headerlink" title="2.3 设置系统变量。为了方便从控制台中管理mongodb，不用每次都进入到D:MongoDB中。"></a>2.3 设置系统变量。为了方便从控制台中管理mongodb，不用每次都进入到D:MongoDB中。</h3><p>我的电脑–属性–高级–环境变量–系统变量中的path,加上;D:\MongoDB ，注意前面加上分号。如下图：<br> <a href="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/5.png" target="_blank" rel="external"></a></p>
+<h3 id="2-4-启动mongdb服务。"><a href="#2-4-启动mongdb服务。" class="headerlink" title="2.4 启动mongdb服务。 　　"></a>2.4 启动mongdb服务。 　　</h3><p>进入控制台中，输入<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod.exe --dbpath=D:\MongoDB\data 。</div></pre></td></tr></table></figure></p>
+<p>如下图：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/52.png" alt=""><br>这样服务就启动了，正常情况下会显示如下：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/53.png" alt=""><br>如果你觉得每次启动都要在终端敲入那么长的代码，可以选择在mongoDB的安装目录下做个 starMongo.bat 文件，把启动代码写在里面，下次启动时，在终端敲入 starMongo 即可，当然你还可以把文件放在启动目录里，这样下次开机启动去MongoDB的服务也启动了。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/6.jpg" alt=""><br>在浏览器中输入<a href="http://localhost:27017/" target="_blank" rel="external">http://localhost:27017/</a>。<br>会出现 You are trying to access MongoDB on the native driver port. For http diagnostic access, add 1000 to the port number </p>
+<p>表示服务已经启动。<br>不要关闭当前这个控制台窗口，另起一个控制台，输入mongo.如下图：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/62.png" alt=""><br>表示已成功连接到mongdb.</p>
+<h2 id="3-npm安装express-jade-mongoose-模块"><a href="#3-npm安装express-jade-mongoose-模块" class="headerlink" title="3. npm安装express + jade + mongoose 模块"></a>3. npm安装express + jade + mongoose 模块</h2><p>npm模块安装直接按上面介绍的方法安装即可，这里简单介绍下这三个模块：</p>
+<h4 id="1-express"><a href="#1-express" class="headerlink" title="1.express"></a>1.express</h4><p>Express 是一个简洁而灵活的 node.js Web应用框架, 基于MVC架构，提供一系列强大特性帮助你创建各种Web应用。<br>（这就好像PHP有 YII thinkPHP 框架）安装 express 需要要 –g全局安装，便于在命令行里创建项目骨架。</p>
+<h4 id="2-jade"><a href="#2-jade" class="headerlink" title="2.jade"></a>2.jade</h4><p>node下的模板引擎，可用于变量值输出和简化HTML代码，Express 框架默认使用的就是jade, 同类模板引擎有 Ejs Handlebars 可选，语法略有不同，可以按自己的编码喜欢好选择，这里推荐使用jade。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/7.jpeg" alt=""></p>
+<h4 id="3-mongoose"><a href="#3-mongoose" class="headerlink" title="3.mongoose"></a>3.mongoose</h4><p>Node.js下对MongoDB进行对像建模的工具，工作于异部环境下。方便创建集合模型、数据库连接、关闭，数据操作。与其它同类工具相比，它所提供的API灵活友好，（如果把mongoDB提供的原生接口比做js原生API。那么Mongoose就像jQuery。）同等工具有 MongoSkin，MongoLian，以及原生驱动 node-mongodb-native等。</p>
+<p>以下是使用原生的MongoDB API 对比 Mongoose 实现通过id更新数据的功能。可以看出实现同样功能，Mongoose写出来的代码精简很多。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/8.jpeg" alt=""></p>
+<h2 id="4-Express初始化项目骨架，并在骨架上进行编码"><a href="#4-Express初始化项目骨架，并在骨架上进行编码" class="headerlink" title="4. Express初始化项目骨架，并在骨架上进行编码"></a>4. Express初始化项目骨架，并在骨架上进行编码</h2><p>上面3个模块成功安装后，项目所需的Node模块就齐了。接下来就是用Express生成项目骨架，并在骨架的基础上增加代码。</p>
+<h3 id="4-1-生成项目骨架"><a href="#4-1-生成项目骨架" class="headerlink" title="4.1 生成项目骨架"></a>4.1 生成项目骨架</h3><p>直接在终端下敲入下面代码，express会自动生成项目的代码</p>
+<blockquote>
+<p>+—以下在终端下运行: ————————————————————+</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">express project-name</span></div></pre></td></tr></table></figure>
+<p>运行后，express将自动生成如下文件夹及文件：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/9.jpeg" alt=""></p>
+<h3 id="4-2-项目骨架目录结构及文件介绍"><a href="#4-2-项目骨架目录结构及文件介绍" class="headerlink" title="4.2 项目骨架目录结构及文件介绍"></a>4.2 项目骨架目录结构及文件介绍</h3><ul>
+<li>/public&nbsp; —— 图片、css、js等静态资源存放目录</li>
+<li>/routes&nbsp; —— 路由 /views&nbsp; &nbsp;—— 模版 /app.js&nbsp; —— Web服务器</li>
+</ul>
+<h3 id="4-3-一个简单的例子-Express-MongoDB-读取数据库并做CRUD操作"><a href="#4-3-一个简单的例子-Express-MongoDB-读取数据库并做CRUD操作" class="headerlink" title="4.3 一个简单的例子 Express + MongoDB 读取数据库并做CRUD操作"></a>4.3 一个简单的例子 Express + MongoDB 读取数据库并做CRUD操作</h3><p>这是直接在express生成的项目骨架上进行编码的小Demo，代码非常简洁，有兴趣的同学可以下载源码在正地测试运行一下。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/10.jpeg" alt=""><br>Demo地址：<a href="http://url.cn/Vn7owS" target="_blank" rel="external">http://url.cn/Vn7owS</a></p>
+<h2 id="5-执行入口文件-node-app，并在浏览器下测试效果"><a href="#5-执行入口文件-node-app，并在浏览器下测试效果" class="headerlink" title="5. 执行入口文件 $node app，并在浏览器下测试效果"></a>5. 执行入口文件 $node app，并在浏览器下测试效果</h2><p>完成对项目的编码后，我们要在浏览器测试下对项目页面的效果及功能进行测试，有3个步骤：</p>
+<ol>
+<li>启动MongoDB服务（具休做法见上面的 2.4）</li>
+<li>在项目目录下终端窗口下运行 $node app<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/11.jpg" alt=""></li>
+<li>浏览器下输入 localhost:3001<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/12.jpg" alt=""><br>以上运行的是4.3提供的小demo项目(Simple Todo List)</li>
+</ol>
+<h2 id="6-部署到服务器上线"><a href="#6-部署到服务器上线" class="headerlink" title="6. 部署到服务器上线"></a>6. 部署到服务器上线</h2><p>项目编码完成并在本地测试无问题后，既可部署到服务器上，当时做“ideas需求管理系统Beta”服务器的部署是kaireewu部署的，有兴趣的同事可以私下骚扰，国内外支持 node.js的虚拟主机很多，可以从&nbsp;<a href="https://github.com/joyent/node/wiki/Node-Hosting" target="_blank" rel="external">node wiki主机列表</a>&nbsp;查询，但界面方便使用上，个人推荐以下3个：</p>
+<ol>
+<li>&nbsp;<a href="http://www.appfog.com" target="_blank" rel="external">appfog</a></li>
+<li>&nbsp;<a href="https://www.nitrous.io/" target="_blank" rel="external">Nitrous.IO</a></li>
+<li>&nbsp;<a href="https://www.openshift.com/" target="_blank" rel="external">openshift</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2013下半年在做中心【ideas需求管理系统】的Beta版本时，在当时缺乏开发人力的情况下，身兼多职，尝试用 Node.js+MongoDB来做平台的构建，由于当时也是第一次接触Express和MongoDB，平时日常的需求又狂轰乱炸，只能利用平时中午少撸一发“德玛西亚”的时间（小撸怡情，大撸伤身）及周未攒出来的宝贵时间，现学现用。系统在2013年下半年的11月份成功上线，供中心所有重构记录需求，生成周报，为【ideas需求管理系统】奠定基础。时及今日，给大家做下分享：&lt;br&gt; &lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/1.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt; 对于1个网页重构的同学，使用Node.js来做前后端构建是有一定优势的，因为你可以不用懂PHP，CGI等开发语言就可以一人搞定前后端，完成一套系统的编码构建，当然如果能懂一些自然最好，在解决一些服务器运维问题时，会更加有方向。当然您需要具备简单的Node.js安装，APP执行，读懂报错的能力，还有较好的 javascript编码能力。好吧，序章已经足够长了，下面开始，&lt;/p&gt;
+&lt;p&gt;##【目录】构建一个Web 应用大概会有6大步骤&lt;br&gt; &lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/2.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-搭建node-js、npm环境&quot;&gt;&lt;a href=&quot;#1-搭建node-js、npm环境&quot; class=&quot;headerlink&quot; title=&quot;1. 搭建node.js、npm环境&quot;&gt;&lt;/a&gt;1. 搭建node.js、npm环境&lt;/h3&gt;&lt;p&gt; 提起node.js对于没有开发基础的同学来说，可能会有点排斥，觉得光搞定环境搭建及配置就够头痛的。其实现在的node.js在window环境下的安装已经不像2年前要先装个cybwin后再手动配window全局变量名那么麻烦，真心不难，直接官网下一个.exe文件，装完node.js及npm环境就已经齐了。So Easy!&amp;nbsp;下面介绍一个非常simple的小程序带你了解node和npm环境。&lt;/p&gt;
+&lt;h4 id=&quot;1-1-确定官方的安装包装上后，确认上node和npm已经装上：&quot;&gt;&lt;a href=&quot;#1-1-确定官方的安装包装上后，确认上node和npm已经装上：&quot; class=&quot;headerlink&quot; title=&quot;1.1 确定官方的安装包装上后，确认上node和npm已经装上：&quot;&gt;&lt;/a&gt;1.1 确定官方的安装包装上后，确认上node和npm已经装上：&lt;/h4&gt;&lt;p&gt;终端下敲入&lt;br&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;node -v&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm -v&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果有正常打印出类似的东东则成功&lt;br&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/3.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-2-以下是一个simple-node小程序&quot;&gt;&lt;a href=&quot;#1-2-以下是一个simple-node小程序&quot; class=&quot;headerlink&quot; title=&quot;1.2 以下是一个simple node小程序&quot;&gt;&lt;/a&gt;1.2 以下是一个simple node小程序&lt;/h4&gt;&lt;p&gt; 功能：在当前目录下生成一个 test.txt 的文本文件，并对此文件上填入文字 “Hello Node”.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="node,mongodb" scheme="http://iamsonic.net/tags/node-mongodb/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Grunt打造前端自动化工作流</title>
     <link href="http://iamsonic.net/2013/07/15/grunt-intro/"/>
     <id>http://iamsonic.net/2013/07/15/grunt-intro/</id>
     <published>2013-07-15T06:28:39.000Z</published>
-    <updated>2017-05-24T06:44:03.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/grunt-intro/grunt-1.jpg" alt="blog-img"></p>
 <h2 id="Grunt这货是啥？"><a href="#Grunt这货是啥？" class="headerlink" title="Grunt这货是啥？"></a>Grunt这货是啥？</h2><p>最近很火的前端自动化小工具，基于任务的命令行构建工具 <a href="http://gruntjs.com" target="_blank" rel="external">http://gruntjs.com</a></p>
@@ -389,7 +472,7 @@
     <link href="http://iamsonic.net/2012/09/09/franklin-13/"/>
     <id>http://iamsonic.net/2012/09/09/franklin-13/</id>
     <published>2012-09-09T06:33:28.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="转给自已，铭记与自勉"><a href="#转给自已，铭记与自勉" class="headerlink" title="转给自已，铭记与自勉"></a>转给自已，铭记与自勉</h3><blockquote>
 <p>一、节制：食不过饱，酒不过量。<br>⑴Temperance: Eat not too dullness; drink not too elevation.</p>
@@ -437,7 +520,7 @@
     <link href="http://iamsonic.net/2011/06/30/ie-hack-fail/"/>
     <id>http://iamsonic.net/2011/06/30/ie-hack-fail/</id>
     <published>2011-06-30T06:32:35.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近项目碰到一个问题，要在CSS里用IE hack取分使用的字体。在IE6-9浏览器下使用宋体，ie9/FF/Safari 使用雅黑字体。按理来讲应该这样写:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Microsoft</span> <span class="selector-tag">YaHei</span>, <span class="selector-tag">YouYuan</span>;</div><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Arial</span>\9; <span class="comment">/* targets ie9 and below*/</span></div></pre></td></tr></table></figure></p>
 <blockquote>
@@ -471,7 +554,7 @@
     <link href="http://iamsonic.net/2011/04/01/take-wife-son/"/>
     <id>http://iamsonic.net/2011/04/01/take-wife-son/</id>
     <published>2011-04-01T15:05:36.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>久别近两个月，后天就要回老婆家接她们母子回广州咯。期待。。。</p>
 <p>这几天晚上睡觉发梦都老是梦到她们两个，分开这么长时间。宝宝现在都快半岁大了，会用手去抓东西，会认人了。希望回去不要不认得老爸喔。此时此刻，归心似箭阿。</p>
@@ -493,7 +576,7 @@
     <link href="http://iamsonic.net/2011/03/22/smoking-year/"/>
     <id>http://iamsonic.net/2011/03/22/smoking-year/</id>
     <published>2011-03-22T15:04:48.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>不知不觉地，也是12年的老烟民了。</p>
 <p>那是个叛逆的年龄，高中的时候，受损友引诱，这东西一拿起来，就没停过手，最初的那个损友A，5年前已经成功戒掉。刚开始的时候，很排斥。清楚的记得，看到朋友A拿烟抽的时候，我的第一感觉是，这是什么人阿？还抽烟，我怎么会与这样的不良少年为友。后来在他的引诱下，身边几个要好的朋友都被拉下水了。而我也跟着悲剧了。。。</p>
@@ -525,7 +608,7 @@
     <link href="http://iamsonic.net/2011/03/17/grab-salt/"/>
     <id>http://iamsonic.net/2011/03/17/grab-salt/</id>
     <published>2011-03-17T13:23:47.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>日本的大地震，福岛的核泄露，再一次让中国人恐慌。前阵日本牛奶全城抢购，再到电子零件涨价，再到盐产品被波及，没完没了…</p>
 <p>昨天晚上外出归来，路过婴儿店，本想为宝宝买几包好的尿片，家里的快用完了，到店里被告知日本产“花王”尿片全部短货，心想，日本奶粉被抢断货也就算了，日本尿片也没有了。没办法，小日本的产品就是好，用过就知道。沮丧之极，回到家中。又接到亲人电话，问楼下周围边还能买到盐吗？赶快去买，现在很多地方都在抢。我问为什么盐会买不到？“原来怕受日本福岛核心电站放射性物质波及，海水扩散时物质被飘移到中国沿海，到时海产盐就会有大量的放射性物质遗留在里面，食用会对身体造成危害。最好先屯积一年左右的食盐量。老家现在市面上都买不到了盐。”当时听了我就在想，就算有危害，盐产品出产时都会质量审核，不至于要先屯积一年的量了，电话里也没多说，我决定去楼下超市看看这边是不是也没有盐卖了。出门前我看了一下家里盐剩下半包了，如果超市有得卖，就先买几包放着。</p>
@@ -555,7 +638,7 @@
     <link href="http://iamsonic.net/2011/03/15/need-blog/"/>
     <id>http://iamsonic.net/2011/03/15/need-blog/</id>
     <published>2011-03-15T12:22:30.000Z</published>
-    <updated>2017-05-24T02:39:37.000Z</updated>
+    <updated>2017-05-24T06:46:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>身边的同行、朋友问及我有没有自己的博客，答曰：”无”！马上投来异样的眼光。似乎很不可思议，难道IT人就必须有自己的博客吗？</p>
 <p>05年博客开始 流行的时候，偶也潮了一回，用LBS搭建了一个人的博客。刚开始主要发布一些牛B的，好看转贴，极少原创，也有一些私人的记录。渐渐地，我发现博客几乎都没有流量，评论倒是很多，但都是些推广的垃圾评论。缺乏交流，由于耐不住寂寞，最终服务器到期时数据全部丢失了博客也就关闭了。</p>
