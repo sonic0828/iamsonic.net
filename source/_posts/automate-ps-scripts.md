@@ -49,6 +49,9 @@ tags: automate,workflow,ps,script
 
 **参考链接:**
  Adobe Photoshop Scripting
- [<span style="text-decoration: underline;">http://www.adobe.com/cn/devnet/photoshop/scripting.html<span style="text-decoration: underline;">](http://www.adobe.com/cn/devnet/photoshop/scripting.html)
+ [http://www.adobe.com/cn/devnet/photoshop/scripting.html](http://www.adobe.com/cn/devnet/photoshop/scripting.html)
  Introduction To Photoshop Scripting
- [<span style="text-decoration: underline;">http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/](http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/)
+ [http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/](http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/)
+
+
+
