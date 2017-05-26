@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iamsonic.net/"/>
-  <updated>2017-05-25T12:13:17.000Z</updated>
+  <updated>2017-05-26T00:29:51.000Z</updated>
   <id>http://iamsonic.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://iamsonic.net/2017/05/20/new-blog/"/>
     <id>http://iamsonic.net/2017/05/20/new-blog/</id>
     <published>2017-05-20T08:45:23.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Sonic-Blog-Come-back"><a href="#Sonic-Blog-Come-back" class="headerlink" title="Sonic Blog Come back!"></a>Sonic Blog Come back!</h2><p>博客主机到期，域名到期一直没有鸟。<br>刚好去年在工作中研究了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>搭建静态博客，机缘巧合又发现了好的博客主题<a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank" rel="external">hexo-theme-prontera</a>。那就换吧，之前文章不多，全部转回MD格式，顺便把域名也从iamsonic.info 换成 iamsonic.net.</p>
 ]]></content>
@@ -40,7 +40,7 @@
     <link href="http://iamsonic.net/2017/03/07/internet-man-practice/"/>
     <id>http://iamsonic.net/2017/03/07/internet-man-practice/</id>
     <published>2017-03-07T10:57:59.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><strong>“谨以此文，献给即将踏入35岁的自己，互联网从业12年之际。”</strong></p>
@@ -180,7 +180,7 @@
     <link href="http://iamsonic.net/2016/03/10/new-gulp4/"/>
     <id>http://iamsonic.net/2016/03/10/new-gulp4/</id>
     <published>2016-03-10T06:25:11.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/gulp4.0-2x.png" alt=""><br>gulp4.0开发1年多了，但是一直没有做为最新的稳定版本对外发布，最近才得知，真是孤陋寡闻一回。初探了一下，发现任务系统的变化蛮大，而且不再兼容3.x 及之前版本的任务系统。个人感受最深的是增加了 <code>gulp.series()</code> 和 <code>gulp.parallel()</code> 方法用于组合任务，多个任务执行时，<strong>可控制任务是异步（并行）或同步（串行），甚至是部分异步，部分同步。</strong></p>
 <p>##全新的 gulp.task()<br>从 3.x 升级到 4.x 主要做的就是修改任务定义，以前的任务是这么写的：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/glup4.0/code1.png" alt=""></p>
@@ -270,18 +270,88 @@
   </entry>
   
   <entry>
+    <title>前端工作流程自动化—node-webkit打包自动化工具</title>
+    <link href="http://iamsonic.net/2015/06/23/automate-node-webkit/"/>
+    <id>http://iamsonic.net/2015/06/23/automate-node-webkit/</id>
+    <published>2015-06-23T07:24:34.000Z</published>
+    <updated>2017-05-26T08:04:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/21.png" alt=""></p>
+<h2 id="这货能干嘛？"><a href="#这货能干嘛？" class="headerlink" title="这货能干嘛？"></a>这货能干嘛？</h2><blockquote>
+<p>node-webkit（现改名为<a href="https://nwjs.io/" target="_blank" rel="external">NW.js</a>）是基于 <a href="https://www.chromium.org/" target="_blank" rel="external">Chromium</a> 和 <a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a> 开发的应用。通过它，你可以使用HTML5、JavaScript、node.js模块来编写本地应用程序。</p>
+</blockquote>
+<h2 id="然它的好处还有这些："><a href="#然它的好处还有这些：" class="headerlink" title="然它的好处还有这些："></a>然它的好处还有这些：</h2><ul>
+<li>解除了浏览器 沙盒 限制<br>跨域操作，本地文件写入操作，这些原本前端无法解决的问题。</li>
+<li>可使用node.js<br>除了node.js本身的特性，意味着npm中那么多的扩展可以供你使用。</li>
+<li>node-webkit还实现了本地化的API<br>例如菜单栏，系统的托盘图标支持，系统剪贴板等。</li>
+<li>跨平台<br>支持 Linux, Mac OS X 和 Windows</li>
+</ul>
+<h3 id="我们用它做了什么？"><a href="#我们用它做了什么？" class="headerlink" title="我们用它做了什么？"></a>我们用它做了什么？</h3><p>通过这个神器，我们把一些内部的繁琐的工作封装打包成可执行的桌面应用，一次打开即可使，无需安装。</p>
+<h3 id="如何用它来开发一个本地应用？"><a href="#如何用它来开发一个本地应用？" class="headerlink" title="如何用它来开发一个本地应用？"></a>如何用它来开发一个本地应用？</h3><h4 id="1-下载最新版本node-webkit，并解压，解开后目录如下："><a href="#1-下载最新版本node-webkit，并解压，解开后目录如下：" class="headerlink" title="1.下载最新版本node-webkit，并解压，解开后目录如下："></a>1.下载最新版本<a href="https://nwjs.io/" target="_blank" rel="external">node-webkit</a>，并解压，解开后目录如下：</h4><p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/22.png" alt=""></p>
+<h4 id="2-在源码根目录下需要建立-package-json-进行配置，用于指定启动读取页面，窗体宽高等等，详细的参数和介绍可以看-官方文档"><a href="#2-在源码根目录下需要建立-package-json-进行配置，用于指定启动读取页面，窗体宽高等等，详细的参数和介绍可以看-官方文档" class="headerlink" title="2.在源码根目录下需要建立 package.json 进行配置，用于指定启动读取页面，窗体宽高等等，详细的参数和介绍可以看 官方文档"></a>2.在源码根目录下需要建立 package.json 进行配置，用于指定启动读取页面，窗体宽高等等，详细的参数和介绍可以看 <a href="https://github.com/nwjs/nw.js/wiki/Manifest-format" target="_blank" rel="external">官方文档</a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="string">"main"</span>: <span class="string">"main.html"</span>,     <span class="comment">// 启动页面</span></div><div class="line">	<span class="string">"name"</span>: <span class="string">"项目名称"</span>,     </div><div class="line">	<span class="string">"window"</span>: &#123;</div><div class="line">		<span class="string">"toolbar"</span>: <span class="literal">false</span>,    <span class="comment">// 工具栏</span></div><div class="line">		<span class="string">"frame"</span>: <span class="literal">false</span>,      <span class="comment">// 框架</span></div><div class="line">		<span class="string">"width"</span>: <span class="number">430</span>,        <span class="comment">// 窗体宽度</span></div><div class="line">		<span class="string">"height"</span>: <span class="number">450</span>,       <span class="comment">// 窗体高度</span></div><div class="line">		<span class="string">"resizable"</span>: <span class="literal">false</span>   <span class="comment">// 窗体是否允许改变尺寸  </span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="3-在框架目录基础上进行开发"><a href="#3-在框架目录基础上进行开发" class="headerlink" title="3.在框架目录基础上进行开发"></a>3.在框架目录基础上进行开发</h4><h2 id="如何本地开发及调试？"><a href="#如何本地开发及调试？" class="headerlink" title="如何本地开发及调试？"></a>如何本地开发及调试？</h2><p>本地开发时，可以把 package.json 里 “toolbar” 设置为 true ，这样就可以浏览器的开发者工具<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/23.gif" alt=""></p>
+<p>如何封包成单一可执行文件？</p>
+<h3 id="有3个布骤："><a href="#有3个布骤：" class="headerlink" title="有3个布骤："></a>有3个布骤：</h3><h4 id="1-项目相关的所有文件打包成一个-zip文件"><a href="#1-项目相关的所有文件打包成一个-zip文件" class="headerlink" title="1. 项目相关的所有文件打包成一个.zip文件"></a>1. 项目相关的所有文件打包成一个.zip文件</h4><p>将项目的入口文件 main.html  配置文件 package.json 及所有页面的资源（images css js node_modules ） 打包成 src.zip<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/24.png" alt=""></p>
+<h4 id="2-项目文件压缩包与nw-exe合体"><a href="#2-项目文件压缩包与nw-exe合体" class="headerlink" title="2. 项目文件压缩包与nw.exe合体"></a>2. 项目文件压缩包与nw.exe合体</h4><p>把刚才打包生成的src.zip放到 node-webkit 项目目录里，执行合并的命令，生成 app.exe（这个步骤是打包生成一个exe可执行文件，但执行这个exe文件还依赖目录里的.dll .dat .pak文件）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">copy /b nw.exe+src.zip app.exe</div></pre></td></tr></table></figure></p>
+<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/25.gif" alt=""></p>
+<h4 id="3-压缩并打包成单一可执行文件"><a href="#3-压缩并打包成单一可执行文件" class="headerlink" title="3. 压缩并打包成单一可执行文件"></a>3. 压缩并打包成单一可执行文件</h4><p>把执行这个exe文件所依赖的 .dll等文件再次打包进exe文件里，这里需要使用一个工具：<a href="http://enigmaprotector.com/en/aboutvb.html" target="_blank" rel="external">Enigma Virtual Box</a>。</p>
+<h4 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h4><ul>
+<li>下载，安装并打开。</li>
+<li>对于中文用户可以在Language菜单中选择Chinese</li>
+<li>在请选择待封包的主程中浏览和选择主程序，如app.exe。</li>
+<li>拖拽（或者单击Add按钮）所有依赖项，包括<em>.dll </em>.dat 和nw.pak到File选项卡的空白处。</li>
+<li>选择选择文件选项，选择压缩文件来压缩。（压缩可以减少最终的exe文件大小，但程序的执行会相应变慢，是否压缩可按具体情况而定）</li>
+<li>点击执行封包。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/26.png" alt=""></li>
+</ul>
+<h2 id="如何修改可执行文件图标？"><a href="#如何修改可执行文件图标？" class="headerlink" title="如何修改可执行文件图标？"></a>如何修改可执行文件图标？</h2><p>好不容易做完的工具封装打包完成，你发现图标还是nw.exe的默认图标，这就需要我们对图标进行自定义。这里又用一个工具 <a href="http://www.angusj.com/resourcehacker/" target="_blank" rel="external">Resource Hacker</a></p>
+<ul>
+<li>安装Resouce Hacker并打开程序</li>
+<li>把要更新icon的应用程序拖放在左边区域，并在左边的面板中选择  Icon Group&gt; IDR_MAINFRAME </li>
+<li>选择新的icon用于替换旧的icon  菜单 Action &gt; Replace Icon </li>
+<li>保存修改 File &gt; Save （<strong>由于旧Icon有缓存，需要过一会再刷新才能看到更换后的效果</strong>）<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/27.gif" alt=""></li>
+</ul>
+<blockquote>
+<p>以上就是通过 node-webkit 封装打包桌面工具的整个流程，布骤有点繁琐。</p>
+</blockquote>
+<p>node.js 有个模块node-webkit-builder可以进行项目的构建，可以选择构建成win和osx 平台，并选择node-webkit的版本。（不足的是：不能完成单一执行文件封装和图标修改）</p>
+<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><p><a href="http://nwjs.io/" target="_blank" rel="external">http://nwjs.io/</a><br><a href="https://github.com/nwjs/nw.js/wiki/How-to-run-apps" target="_blank" rel="external">https://github.com/nwjs/nw.js/wiki/How-to-run-apps</a><br><a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps" target="_blank" rel="external">https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps</a><br><a href="http://www.techtalkz.com/tips-n-tricks/3866-how-change-default-icon-exe-using-resource-editor-resource-hacker.html" target="_blank" rel="external">http://www.techtalkz.com/tips-n-tricks/3866-how-change-default-icon-exe-using-resource-editor-resource-hacker.html</a><br><a href="https://github.com/mllrsohn/node-webkit-builder" target="_blank" rel="external">https://github.com/mllrsohn/node-webkit-builder</a><br><a href="http://blog.inching.org/2014/03/19/node-webkit-package/" target="_blank" rel="external">http://blog.inching.org/2014/03/19/node-webkit-package/</a><br><a href="https://cnodejs.org/topic/53233277bfb7097d7a00059e" target="_blank" rel="external">https://cnodejs.org/topic/53233277bfb7097d7a00059e</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/21.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;这货能干嘛？&quot;&gt;&lt;a href=&quot;#这货能干嘛？&quot; class=&quot;headerlink&quot; title=&quot;这货能干嘛？&quot;&gt;&lt;/a&gt;这货能干嘛？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;node-webkit（现改名为&lt;a href=&quot;https://nwjs.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NW.js&lt;/a&gt;）是基于 &lt;a href=&quot;https://www.chromium.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chromium&lt;/a&gt; 和 &lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node.js&lt;/a&gt; 开发的应用。通过它，你可以使用HTML5、JavaScript、node.js模块来编写本地应用程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;然它的好处还有这些：&quot;&gt;&lt;a href=&quot;#然它的好处还有这些：&quot; class=&quot;headerlink&quot; title=&quot;然它的好处还有这些：&quot;&gt;&lt;/a&gt;然它的好处还有这些：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;解除了浏览器 沙盒 限制&lt;br&gt;跨域操作，本地文件写入操作，这些原本前端无法解决的问题。&lt;/li&gt;
+&lt;li&gt;可使用node.js&lt;br&gt;除了node.js本身的特性，意味着npm中那么多的扩展可以供你使用。&lt;/li&gt;
+&lt;li&gt;node-webkit还实现了本地化的API&lt;br&gt;例如菜单栏，系统的托盘图标支持，系统剪贴板等。&lt;/li&gt;
+&lt;li&gt;跨平台&lt;br&gt;支持 Linux, Mac OS X 和 Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;我们用它做了什么？&quot;&gt;&lt;a href=&quot;#我们用它做了什么？&quot; class=&quot;headerlink&quot; title=&quot;我们用它做了什么？&quot;&gt;&lt;/a&gt;我们用它做了什么？&lt;/h3&gt;&lt;p&gt;通过这个神器，我们把一些内部的繁琐的工作封装打包成可执行的桌面应用，一次打开即可使，无需安装。&lt;/p&gt;
+&lt;h3 id=&quot;如何用它来开发一个本地应用？&quot;&gt;&lt;a href=&quot;#如何用它来开发一个本地应用？&quot; class=&quot;headerlink&quot; title=&quot;如何用它来开发一个本地应用？&quot;&gt;&lt;/a&gt;如何用它来开发一个本地应用？&lt;/h3&gt;&lt;h4 id=&quot;1-下载最新版本node-webkit，并解压，解开后目录如下：&quot;&gt;&lt;a href=&quot;#1-下载最新版本node-webkit，并解压，解开后目录如下：&quot; class=&quot;headerlink&quot; title=&quot;1.下载最新版本node-webkit，并解压，解开后目录如下：&quot;&gt;&lt;/a&gt;1.下载最新版本&lt;a href=&quot;https://nwjs.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node-webkit&lt;/a&gt;，并解压，解开后目录如下：&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/22.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="automate,workflow,node-webkit" scheme="http://iamsonic.net/tags/automate-workflow-node-webkit/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端工作流程自动化—Node.js编写小工具</title>
     <link href="http://iamsonic.net/2014/11/25/automate-node-script/"/>
     <id>http://iamsonic.net/2014/11/25/automate-node-script/</id>
     <published>2014-11-24T23:16:34.000Z</published>
-    <updated>2017-05-25T23:29:53.000Z</updated>
+    <updated>2017-05-26T07:58:21.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/9.jpeg" alt=""><br>关于node.js就不多介绍了。node.js具备文件操作的功能，这其实就能够来做很多事情，比如：文件的批量重命名，数据分析、数据爬虫脚本……这里提供两个简单的例子，主要用到以下两个原生模块：</p>
 <ul>
 <li><strong>(file system)模块</strong><br>实现文件的创建、读取、写入、编辑、删除</li>
 <li><strong>path模块</strong><br>实现文件路径的生成和管理</li>
 </ul>
-<h3 id="例子1-超简单实例认识fs-path"><a href="#例子1-超简单实例认识fs-path" class="headerlink" title="例子1 - 超简单实例认识fs path**"></a>例子1 - 超简单实例认识fs path**</h3><h4 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h4><ul>
+<h3 id="例子1-超简单实例认识fs-path"><a href="#例子1-超简单实例认识fs-path" class="headerlink" title="例子1 - 超简单实例认识fs path"></a>例子1 - 超简单实例认识fs path</h3><h4 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h4><ul>
 <li>当前目录创建hello.txt；</li>
 <li>在hello.txt里写入文字“Hello Node”；</li>
 <li>成功后打印出hello.txt的目录。</li>
@@ -304,7 +374,7 @@
 &lt;li&gt;&lt;strong&gt;(file system)模块&lt;/strong&gt;&lt;br&gt;实现文件的创建、读取、写入、编辑、删除&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;path模块&lt;/strong&gt;&lt;br&gt;实现文件路径的生成和管理&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;例子1-超简单实例认识fs-path&quot;&gt;&lt;a href=&quot;#例子1-超简单实例认识fs-path&quot; class=&quot;headerlink&quot; title=&quot;例子1 - 超简单实例认识fs path**&quot;&gt;&lt;/a&gt;例子1 - 超简单实例认识fs path**&lt;/h3&gt;&lt;h4 id=&quot;功能介绍&quot;&gt;&lt;a href=&quot;#功能介绍&quot; class=&quot;headerlink&quot; title=&quot;功能介绍&quot;&gt;&lt;/a&gt;功能介绍&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id=&quot;例子1-超简单实例认识fs-path&quot;&gt;&lt;a href=&quot;#例子1-超简单实例认识fs-path&quot; class=&quot;headerlink&quot; title=&quot;例子1 - 超简单实例认识fs path&quot;&gt;&lt;/a&gt;例子1 - 超简单实例认识fs path&lt;/h3&gt;&lt;h4 id=&quot;功能介绍&quot;&gt;&lt;a href=&quot;#功能介绍&quot; class=&quot;headerlink&quot; title=&quot;功能介绍&quot;&gt;&lt;/a&gt;功能介绍&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;当前目录创建hello.txt；&lt;/li&gt;
 &lt;li&gt;在hello.txt里写入文字“Hello Node”；&lt;/li&gt;
 &lt;li&gt;成功后打印出hello.txt的目录。&lt;/li&gt;
@@ -319,11 +389,120 @@
   </entry>
   
   <entry>
+    <title>前端工作流程自动化—Grunt/Gulp 自动化</title>
+    <link href="http://iamsonic.net/2014/11/21/automate-grunt-gulp/"/>
+    <id>http://iamsonic.net/2014/11/21/automate-grunt-gulp/</id>
+    <published>2014-11-21T06:59:04.000Z</published>
+    <updated>2017-05-26T07:57:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Grunt/Gulp 都是node.js下的模块，简单来说是自动化任务运行器，两者都有社区及大量的插件支撑，在所有的自动化工具领域里，这两者是最好的前端自动化构建工具。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/13.png" alt=""></p>
+<blockquote>
+<p>那么问题来了，Grunt和Gulp到底哪家强？</p>
+</blockquote>
+<p>在回答这个问题前，先给大家看一组下面的数据：(数据更新于：2016-8-28)</p>
+<table>
+<thead>
+<tr>
+<th>社区插件</th>
+<th>配置</th>
+<th>API</th>
+<th>构建系统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grunt</td>
+<td>5,869</td>
+<td>方便</td>
+<td>任务式</td>
+</tr>
+<tr>
+<td>Gulp</td>
+<td>2,604</td>
+<td>更方便</td>
+<td>流</td>
+</tr>
+</tbody>
+</table>
+<h4 id="再看看实现同样功能的配置代码："><a href="#再看看实现同样功能的配置代码：" class="headerlink" title="再看看实现同样功能的配置代码："></a>再看看实现同样功能的配置代码：</h4><p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/16.png" alt=""></p>
+<p>作者本人之前一直使用Grunt来做自动化构建的，在Gulp出来后，经过一段时间的试用感觉配置比Grunt方便多了，如果你两者还没接触过，本人推荐直接使用Gulp，毕竟简单实用门槛低才是硬道理。</p>
+<h4 id="相比Grunt，Gulp具备以下优点："><a href="#相比Grunt，Gulp具备以下优点：" class="headerlink" title="相比Grunt，Gulp具备以下优点："></a>相比Grunt，Gulp具备以下优点：</h4><ul>
+<li>配置更简洁，而且遵循代码优于配置策略，维护Gulp更像是写代码；</li>
+<li>易学，核心API只有5个，通过管道流组合自己想要的任务；</li>
+<li>一个插件只完成一个功能， 这也是Unix的设计原则之一，各个功能通过流进行整合并完成复杂的任务。</li>
+</ul>
+<h4 id="当然也有劣势："><a href="#当然也有劣势：" class="headerlink" title="当然也有劣势："></a>当然也有劣势：</h4><ul>
+<li>相对Grunt而言，插件相对较少；</li>
+<li>自动化可配置性不够Grunt强。</li>
+</ul>
+<p>基于目前重构/前端的工作内容，需用到自动化功能大多数还是文件的处理，如压缩，合并，打包、检测、构建……，以上提到的两点劣势在目前的工作层面感受不明显，况且Gulp出现的目的是希望能够取代Grunt，成为最流行的自动化任务运行器。</p>
+<h4 id="Gulp能为我们做什么？以下这张图可以告诉你（包括但不限于）"><a href="#Gulp能为我们做什么？以下这张图可以告诉你（包括但不限于）" class="headerlink" title="Gulp能为我们做什么？以下这张图可以告诉你（包括但不限于）"></a>Gulp能为我们做什么？以下这张图可以告诉你（包括但不限于）</h4><p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/17.png" alt=""></p>
+<h4 id="Gulp的安装配置"><a href="#Gulp的安装配置" class="headerlink" title="Gulp的安装配置"></a>Gulp的安装配置</h4><p>由于文章篇幅的考虑，这里就不把 Gulp的安装配置展开讨论，大家有兴趣可以看看 kaireewu 的 前端构建工具 Gulp.js 上手实例 。里面有详细的介绍及上手实例。</p>
+<h4 id="Gulp在项目里的实践"><a href="#Gulp在项目里的实践" class="headerlink" title="Gulp在项目里的实践"></a>Gulp在项目里的实践</h4><p>目前本人负责游戏官网的网页重构工作，日常的项目的编码及构建都使用Gulp。主要有应用有如下：</p>
+<h4 id="应用场景介绍"><a href="#应用场景介绍" class="headerlink" title="应用场景介绍"></a>应用场景介绍</h4><ol>
+<li><p>开始一个项目（gulp init-simple）<br>新建一个项目文件夹，并把预设的目录及文件拷贝到新建的项目文件夹里。</p>
+</li>
+<li><p>启动文件变更检测服务（gulp watch）<br>开始编码前先执行启动服务，打开<a href="http://localhost:8080查看页面，当项目里的" target="_blank" rel="external">http://localhost:8080查看页面，当项目里的</a> .html/.css/.js 文件发生变更时，浏览器自动对当前打开的 <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 下的页面进行耍新。</p>
+</li>
+<li><p>线上版本编码构建（gulp build-all）<br>项目代码上线前的构建，这里的操作主要有：压缩所有的图片文件，html文件相对路径改为绝对路径，html文件编码转换，CSS/JS压缩并合并，所有处理过后的文件存放dist目录。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/14.gif" alt=""></p>
+</li>
+</ol>
+<p>参考链接:<br><a href="http://gruntjs.com/" target="_blank" rel="external">Grunt: The JavaScript Task Runner</a><br><a href="http://gulpjs.com/" target="_blank" rel="external">gulp.js - the streaming build system</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Grunt/Gulp 都是node.js下的模块，简单来说是自动化任务运行器，两者都有社区及大量的插件支撑，在所有的自动化工具领域里，这两者是最好的前端自动化构建工具。&lt;br&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/13.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那么问题来了，Grunt和Gulp到底哪家强？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在回答这个问题前，先给大家看一组下面的数据：(数据更新于：2016-8-28)&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;社区插件&lt;/th&gt;
+&lt;th&gt;配置&lt;/th&gt;
+&lt;th&gt;API&lt;/th&gt;
+&lt;th&gt;构建系统&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Grunt&lt;/td&gt;
+&lt;td&gt;5,869&lt;/td&gt;
+&lt;td&gt;方便&lt;/td&gt;
+&lt;td&gt;任务式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gulp&lt;/td&gt;
+&lt;td&gt;2,604&lt;/td&gt;
+&lt;td&gt;更方便&lt;/td&gt;
+&lt;td&gt;流&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;再看看实现同样功能的配置代码：&quot;&gt;&lt;a href=&quot;#再看看实现同样功能的配置代码：&quot; class=&quot;headerlink&quot; title=&quot;再看看实现同样功能的配置代码：&quot;&gt;&lt;/a&gt;再看看实现同样功能的配置代码：&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/16.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者本人之前一直使用Grunt来做自动化构建的，在Gulp出来后，经过一段时间的试用感觉配置比Grunt方便多了，如果你两者还没接触过，本人推荐直接使用Gulp，毕竟简单实用门槛低才是硬道理。&lt;/p&gt;
+&lt;h4 id=&quot;相比Grunt，Gulp具备以下优点：&quot;&gt;&lt;a href=&quot;#相比Grunt，Gulp具备以下优点：&quot; class=&quot;headerlink&quot; title=&quot;相比Grunt，Gulp具备以下优点：&quot;&gt;&lt;/a&gt;相比Grunt，Gulp具备以下优点：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;配置更简洁，而且遵循代码优于配置策略，维护Gulp更像是写代码；&lt;/li&gt;
+&lt;li&gt;易学，核心API只有5个，通过管道流组合自己想要的任务；&lt;/li&gt;
+&lt;li&gt;一个插件只完成一个功能， 这也是Unix的设计原则之一，各个功能通过流进行整合并完成复杂的任务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;当然也有劣势：&quot;&gt;&lt;a href=&quot;#当然也有劣势：&quot; class=&quot;headerlink&quot; title=&quot;当然也有劣势：&quot;&gt;&lt;/a&gt;当然也有劣势：&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="automate,workflow,grunt,gulp" scheme="http://iamsonic.net/tags/automate-workflow-grunt-gulp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端工作流程自动化—PS脚本自动化(Photoshop Scripting)</title>
     <link href="http://iamsonic.net/2014/11/18/automate-ps-scripts/"/>
     <id>http://iamsonic.net/2014/11/18/automate-ps-scripts/</id>
     <published>2014-11-18T11:58:21.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T07:11:39.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/4.png" alt=""><br>提到PS的自动化，大家最先想到的应该是“录制动作”，但“录制动作”只能做一些模式非常固定的重复事情，比如对图片批量地加上水印，修改大小并保存这类操作。今天介绍的是PS脚本，相对于“录制动作”，它具备下面几点优势：</p>
 <ol>
@@ -348,7 +527,7 @@
 <li>重启PS，在菜单 文件-&gt; 脚本  即可看到新增的脚本CreateGuideLine</li>
 </ol>
 <p><strong>【代码浏览】</strong><br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/8.png" alt=""></p>
-<p><strong>参考链接:</strong><br> Adobe Photoshop Scripting<br> <a href="http://www.adobe.com/cn/devnet/photoshop/scripting.html" target="_blank" rel="external"><span style="text-decoration: underline;">http://www.adobe.com/cn/devnet/photoshop/scripting.html<span style="text-decoration: underline;"></span></span></a><br> Introduction To Photoshop Scripting<br> <a href="http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/" target="_blank" rel="external"><span style="text-decoration: underline;">http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/</span></a></p>
+<p><strong>参考链接:</strong><br> Adobe Photoshop Scripting<br> <a href="http://www.adobe.com/cn/devnet/photoshop/scripting.html" target="_blank" rel="external">http://www.adobe.com/cn/devnet/photoshop/scripting.html</a><br> Introduction To Photoshop Scripting<br> <a href="http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/" target="_blank" rel="external">http://www.smashingmagazine.com/2013/07/25/introduction-to-photoshop-scripting/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -381,7 +560,7 @@
     <link href="http://iamsonic.net/2014/09/24/node-mongodb-webapp/"/>
     <id>http://iamsonic.net/2014/09/24/node-mongodb-webapp/</id>
     <published>2014-09-24T05:45:49.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>2013下半年在做中心【ideas需求管理系统】的Beta版本时，在当时缺乏开发人力的情况下，身兼多职，尝试用 Node.js+MongoDB来做平台的构建，由于当时也是第一次接触Express和MongoDB，平时日常的需求又狂轰乱炸，只能利用平时中午少撸一发“德玛西亚”的时间（小撸怡情，大撸伤身）及周未攒出来的宝贵时间，现学现用。系统在2013年下半年的11月份成功上线，供中心所有重构记录需求，生成周报，为【ideas需求管理系统】奠定基础。时及今日，给大家做下分享：<br> <img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/node-mongodb/1.jpeg" alt=""></p>
 <p> 对于1个网页重构的同学，使用Node.js来做前后端构建是有一定优势的，因为你可以不用懂PHP，CGI等开发语言就可以一人搞定前后端，完成一套系统的编码构建，当然如果能懂一些自然最好，在解决一些服务器运维问题时，会更加有方向。当然您需要具备简单的Node.js安装，APP执行，读懂报错的能力，还有较好的 javascript编码能力。好吧，序章已经足够长了，下面开始，</p>
@@ -464,7 +643,7 @@
     <link href="http://iamsonic.net/2013/07/15/grunt-intro/"/>
     <id>http://iamsonic.net/2013/07/15/grunt-intro/</id>
     <published>2013-07-15T06:28:39.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/grunt-intro/grunt-1.jpg" alt="blog-img"></p>
 <h2 id="Grunt这货是啥？"><a href="#Grunt这货是啥？" class="headerlink" title="Grunt这货是啥？"></a>Grunt这货是啥？</h2><p>最近很火的前端自动化小工具，基于任务的命令行构建工具 <a href="http://gruntjs.com" target="_blank" rel="external">http://gruntjs.com</a></p>
@@ -579,7 +758,7 @@
     <link href="http://iamsonic.net/2012/09/09/franklin-13/"/>
     <id>http://iamsonic.net/2012/09/09/franklin-13/</id>
     <published>2012-09-09T06:33:28.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="转给自已，铭记与自勉"><a href="#转给自已，铭记与自勉" class="headerlink" title="转给自已，铭记与自勉"></a>转给自已，铭记与自勉</h3><blockquote>
 <p>一、节制：食不过饱，酒不过量。<br>⑴Temperance: Eat not too dullness; drink not too elevation.</p>
@@ -627,7 +806,7 @@
     <link href="http://iamsonic.net/2011/06/30/ie-hack-fail/"/>
     <id>http://iamsonic.net/2011/06/30/ie-hack-fail/</id>
     <published>2011-06-30T06:32:35.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近项目碰到一个问题，要在CSS里用IE hack取分使用的字体。在IE6-9浏览器下使用宋体，ie9/FF/Safari 使用雅黑字体。按理来讲应该这样写:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Microsoft</span> <span class="selector-tag">YaHei</span>, <span class="selector-tag">YouYuan</span>;</div><div class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Arial</span>\9; <span class="comment">/* targets ie9 and below*/</span></div></pre></td></tr></table></figure></p>
 <blockquote>
@@ -661,7 +840,7 @@
     <link href="http://iamsonic.net/2011/04/01/take-wife-son/"/>
     <id>http://iamsonic.net/2011/04/01/take-wife-son/</id>
     <published>2011-04-01T15:05:36.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>久别近两个月，后天就要回老婆家接她们母子回广州咯。期待。。。</p>
 <p>这几天晚上睡觉发梦都老是梦到她们两个，分开这么长时间。宝宝现在都快半岁大了，会用手去抓东西，会认人了。希望回去不要不认得老爸喔。此时此刻，归心似箭阿。</p>
@@ -683,7 +862,7 @@
     <link href="http://iamsonic.net/2011/03/22/smoking-year/"/>
     <id>http://iamsonic.net/2011/03/22/smoking-year/</id>
     <published>2011-03-22T15:04:48.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>不知不觉地，也是12年的老烟民了。</p>
 <p>那是个叛逆的年龄，高中的时候，受损友引诱，这东西一拿起来，就没停过手，最初的那个损友A，5年前已经成功戒掉。刚开始的时候，很排斥。清楚的记得，看到朋友A拿烟抽的时候，我的第一感觉是，这是什么人阿？还抽烟，我怎么会与这样的不良少年为友。后来在他的引诱下，身边几个要好的朋友都被拉下水了。而我也跟着悲剧了。。。</p>
@@ -715,7 +894,7 @@
     <link href="http://iamsonic.net/2011/03/17/grab-salt/"/>
     <id>http://iamsonic.net/2011/03/17/grab-salt/</id>
     <published>2011-03-17T13:23:47.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>日本的大地震，福岛的核泄露，再一次让中国人恐慌。前阵日本牛奶全城抢购，再到电子零件涨价，再到盐产品被波及，没完没了…</p>
 <p>昨天晚上外出归来，路过婴儿店，本想为宝宝买几包好的尿片，家里的快用完了，到店里被告知日本产“花王”尿片全部短货，心想，日本奶粉被抢断货也就算了，日本尿片也没有了。没办法，小日本的产品就是好，用过就知道。沮丧之极，回到家中。又接到亲人电话，问楼下周围边还能买到盐吗？赶快去买，现在很多地方都在抢。我问为什么盐会买不到？“原来怕受日本福岛核心电站放射性物质波及，海水扩散时物质被飘移到中国沿海，到时海产盐就会有大量的放射性物质遗留在里面，食用会对身体造成危害。最好先屯积一年左右的食盐量。老家现在市面上都买不到了盐。”当时听了我就在想，就算有危害，盐产品出产时都会质量审核，不至于要先屯积一年的量了，电话里也没多说，我决定去楼下超市看看这边是不是也没有盐卖了。出门前我看了一下家里盐剩下半包了，如果超市有得卖，就先买几包放着。</p>
@@ -745,7 +924,7 @@
     <link href="http://iamsonic.net/2011/03/15/need-blog/"/>
     <id>http://iamsonic.net/2011/03/15/need-blog/</id>
     <published>2011-03-15T12:22:30.000Z</published>
-    <updated>2017-05-25T12:13:17.000Z</updated>
+    <updated>2017-05-26T00:29:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>身边的同行、朋友问及我有没有自己的博客，答曰：”无”！马上投来异样的眼光。似乎很不可思议，难道IT人就必须有自己的博客吗？</p>
 <p>05年博客开始 流行的时候，偶也潮了一回，用LBS搭建了一个人的博客。刚开始主要发布一些牛B的，好看转贴，极少原创，也有一些私人的记录。渐渐地，我发现博客几乎都没有流量，评论倒是很多，但都是些推广的垃圾评论。缺乏交流，由于耐不住寂寞，最终服务器到期时数据全部丢失了博客也就关闭了。</p>
