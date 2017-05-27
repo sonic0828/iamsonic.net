@@ -1,6 +1,5 @@
 ---
-title: about
-date: 2017-05-20 15:03:18
+title: 关于我
 ---
 
 ![](http://iamsonic-1253772978.cosgz.myqcloud.com/blog/about/avatar.png)
