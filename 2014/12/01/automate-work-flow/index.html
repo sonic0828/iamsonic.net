@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 前端工作流程自动化—流程打造及项目应用 · 融点Sonic的博客</title><meta name="description" content="前端工作流程自动化—流程打造及项目应用 - Sonic"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/prontera.css"><link rel="search" type="application/opensearchdescription+xml" href="http://iamsonic.net/atom.xml" title="融点Sonic的博客"></head><body><header class="feature-header"><nav class="component-nav"><ul><div class="logo-container"><a href="/"><h2 class="title">融点Sonic的博客</h2></a></div><a href="/" target="_self" class="li component-nav-item"><p>首页</p></a><a href="/archives" target="_self" class="li component-nav-item"><p>归档</p></a><a href="/about" target="_self" class="li component-nav-item"><p>关于我</p></a><ul class="shortcut-icons"><a href="https://github.com/sonic0828" target="_blank"><img src="/images/github.svg" class="icon"></a><a href="/atom.xml" target="_blank"><img src="/images/rss.svg" class="icon"></a></ul></ul></nav></header><main class="container"><div id="post-container"><div class="post"><article class="post-block"><h1 class="post-title">前端工作流程自动化—流程打造及项目应用</h1><div class="post-info">Dec 1, 2014</div><div class="post-content"><blockquote>
+<p>我相信每一位重构/前端同学，都有一颗自动化的心！</p>
+</blockquote>
+<p>文件复制粘帖、重命名、文件合并、图像压缩、代码压缩、单元测试、线上版本代码构建等等，这一幕一幕，都是重构/前端同学熟悉又单调乏味的工作流程。做为一个稍微有追求的从业人员，你愿意在如何复杂乏味的工作中耗尽你的人生么？我们需要自动化的工作流程，自动化的工具，为工作节约时间，使我们能够专注于真正重要有意义的工作，比如优化用户体验，设计业务逻辑，编写代码等等。</p>
+<h2 id="项目编码的正常工作流程-amp-自动化工作流程对比"><a href="#项目编码的正常工作流程-amp-自动化工作流程对比" class="headerlink" title="项目编码的正常工作流程&amp;自动化工作流程对比"></a>项目编码的正常工作流程&amp;自动化工作流程对比</h2><p><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/1.png" alt=""></p>
+<p>一个项目从开始到完成代码的构建，大概会经历上面4个环节，左右两边分别是正常流程和自动化流程执行时需要做的工作。我们可以看到，在每个环节中，总有相对应的自动化工具和方法来应对，从而节省时间。我们可以从下面的图表了解一下各个环节所占用的时间对比：<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/2.png" alt=""></p>
+<h2 id="自动化工作流程的项目应用"><a href="#自动化工作流程的项目应用" class="headerlink" title="自动化工作流程的项目应用"></a>自动化工作流程的项目应用</h2><p>那么问题来了，选择怎样的项目来做尝试？是需要长期维护的大项目还是重枯燥的小项目？</p>
+<p>建议先从一些简单的小项目入手，由于目前负责IEG游戏官网的重构工作，除了官网本身的改版及维护，平时还有不少重点的游戏专题需要内部支持，比如：重点活动专题，游戏版本专题，游戏品牌站。这些上线周期较短，重复度高的小项目，是非常适合用来尝试自动化的。<br><img src="http://iamsonic-1253772978.cosgz.myqcloud.com/blog/automate-corpus/3.png" alt=""></p>
+<h4 id="在不同的项目中，自动化所带来的省时收益是不同的，如："><a href="#在不同的项目中，自动化所带来的省时收益是不同的，如：" class="headerlink" title="在不同的项目中，自动化所带来的省时收益是不同的，如："></a>在不同的项目中，自动化所带来的省时收益是不同的，如：</h4><ul>
+<li>做日常的游戏专题重构，最大的时间收益是“自动刷新”部分；</li>
+<li>品牌站由于加载了不少JS文件资源，“自动刷新”和“线上版本构建”都是大的收益点；</li>
+<li>移动端的页面运用了大量CSS3.“CSS3代码自动前缀补全”是最节省编码时间的。</li>
+</ul>
+<h2 id="自动化工具介绍"><a href="#自动化工具介绍" class="headerlink" title="自动化工具介绍"></a>自动化工具介绍</h2><p>在开始讲自动化工具前，不得不提一下<a href="http://www.99css.com/" target="_blank" rel="external">涛哥</a>的<a href="http://www.99css.com/cssgaga/" target="_blank" rel="external">CssGaga</a>。在Grunt/Gulp还没出来前，CssGaga可以说是本厂最好用的前端自动化神器。有幸在一个移动端的页面上尝试过，特别的方便，真心赞！只可惜CssGaga是按当时QQ空间重构团队的业务需求高度自定义出来的，虽然现在拿来很多自动化功能都直接能用，但是在配置上确实不够Grunt/Gulp灵活，无法覆盖不同团队不场景的业务需求。</p>
+<p>想要自己打造一个高度可配置，适应多种业备场景的自动化工具，这个工作门槛似乎高了一点，但如果你懂得JavaScript编码并熟悉node.js ，其实就已经具备了自行制订自动化脚本的能力。这里介绍几个自动化的工具和方法，抛砖引玉，我相信还有很多小工具和方法，希望大家可以一起补充和指正：</p>
+<ol>
+<li><p>PS脚本自动化(Photoshop Scripting)<br><a href="/2014/11/18/automate-ps-scripts/">地址传送门</a></p>
+</li>
+<li><p>Node.js编写小工具<br><a href="/2014/11/25/automate-node-script/">地址传送门</a></p>
+</li>
+<li><p>Grunt/Gulp 自动化<br><a href="/2014/11/21/automate-grunt-gulp/">地址传送门</a></p>
+</li>
+<li><p>node-webkit 打包自动化工具<br><a href="/2015/06/23/automate-node-webkit/">地址传送门</a></p>
+</li>
+</ol>
+<h2 id="项目应用场景视频"><a href="#项目应用场景视频" class="headerlink" title="项目应用场景视频"></a>项目应用场景视频</h2><p>在日常的工作流程中，本人选出一些比较有代表性的重复工作进行自动化应用，录制成几个视频：</p>
+<h3 id="场景1-大量文件名列表记录"><a href="#场景1-大量文件名列表记录" class="headerlink" title="场景1-大量文件名列表记录"></a>场景1-大量文件名列表记录</h3><h4 id="场景介绍"><a href="#场景介绍" class="headerlink" title="场景介绍"></a>场景介绍</h4><blockquote>
+<p>某天，开发哥要我把新项目里所有的重构资源文件，整成个文件列表发给他，用于新项目的发布时用，看下了项目里的所有重构文件，总共有100多个文件呀，难道要我一个个复制文件名并粘帖？</p>
+</blockquote>
+<h4 id="场景应对"><a href="#场景应对" class="headerlink" title="场景应对"></a>场景应对</h4><blockquote>
+<p>我默默地打开编辑器，写了一个geturl.js。 在node.js环境下运行…..  </p>
+</blockquote>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><p>视频地址：<a href="http://v.qq.com/page/s/y/w/s0140jca4yw.html" target="_blank" rel="external">http://v.qq.com/page/s/y/w/s0140jca4yw.html</a></p>
+<h3 id="场景2-大量同尺寸图片导出"><a href="#场景2-大量同尺寸图片导出" class="headerlink" title="场景2-大量同尺寸图片导出"></a>场景2-大量同尺寸图片导出</h3><h4 id="场景介绍-1"><a href="#场景介绍-1" class="headerlink" title="场景介绍"></a>场景介绍</h4><blockquote>
+<p>某天，接到官网一个新的版本专题，这跟以往的需求差不多，但是里面图片特别多，有几十个，一个个切出来保存命名特别耗时，体力活阿！</p>
+</blockquote>
+<h4 id="场景应对-1"><a href="#场景应对-1" class="headerlink" title="场景应对"></a>场景应对</h4><blockquote>
+<p>我默默地打开PS，选择“文件”=&gt;“脚本”，两个脚本搞定这批图片的保存…..</p>
+</blockquote>
+<h4 id="视频-1"><a href="#视频-1" class="headerlink" title="视频"></a>视频</h4><p>视频地址：<a href="http://v.qq.com/page/z/p/i/z0140bhb6pi.html" target="_blank" rel="external">http://v.qq.com/page/z/p/i/z0140bhb6pi.html</a></p>
+<h3 id="场景3-项目快速初始化-amp-自动刷新"><a href="#场景3-项目快速初始化-amp-自动刷新" class="headerlink" title="场景3-项目快速初始化&amp;自动刷新"></a>场景3-项目快速初始化&amp;自动刷新</h3><h4 id="场景介绍-2"><a href="#场景介绍-2" class="headerlink" title="场景介绍"></a>场景介绍</h4><blockquote>
+<p>刚才的官网版本专题切完了，现在开始新建项目文件，编写代码，要新建N个文件夹，N个文件，测试效果时还要刷新无数次浏览器…</p>
+</blockquote>
+<h4 id="场景应对-2"><a href="#场景应对-2" class="headerlink" title="场景应对"></a>场景应对</h4><blockquote>
+<p>我默默地打开终端，输入Gulp init-simple   Gulp watch. 打开浏览器，剩下的就只是专心编码…</p>
+</blockquote>
+<h4 id="视频-2"><a href="#视频-2" class="headerlink" title="视频"></a>视频</h4><p>视频地址：<a href="http://v.qq.com/page/v/d/5/v0140pny3d5.html" target="_blank" rel="external">http://v.qq.com/page/v/d/5/v0140pny3d5.html</a></p>
+<h3 id="场景4-项目线上版本编码构建"><a href="#场景4-项目线上版本编码构建" class="headerlink" title="场景4-项目线上版本编码构建"></a>场景4-项目线上版本编码构建</h3><h4 id="场景介绍-3"><a href="#场景介绍-3" class="headerlink" title="场景介绍"></a>场景介绍</h4><blockquote>
+<p>版本专题终于编写完代码了，现在要发布到webplat了，但是发布前，还要做资源分离工作，并压缩CSS、JS、IMG，还有把文件批量转换成gbk编码，多么熟悉又枯燥的工作阿……</p>
+</blockquote>
+<h4 id="场景应对-3"><a href="#场景应对-3" class="headerlink" title="场景应对"></a>场景应对</h4><blockquote>
+<p>我默默地打开终端，输入Gulp build-all ，等待几秒钟，以上工作全部搞定…</p>
+</blockquote>
+<h4 id="视频-3"><a href="#视频-3" class="headerlink" title="视频"></a>视频</h4><p>视频地址：<a href="http://v.qq.com/page/o/m/x/o0140vsudmx.html" target="_blank" rel="external">http://v.qq.com/page/o/m/x/o0140vsudmx.html</a></p>
+</div></article></div><div id="disqus_thread"></div></div><script>var disqus_shortname = 'iamsonic';
+var disqus_identifier = '2014/12/01/automate-work-flow/';
+var disqus_title = '前端工作流程自动化—流程打造及项目应用';
+var disqus_url = 'http://iamsonic.net/2014/12/01/automate-work-flow/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//iamsonic.disqus.com/count.js" async></script></main><footer class="footer-container"><div class="paginator"><a href="/2015/06/23/automate-node-webkit/" class="prev">上一篇</a><a href="/2014/11/25/automate-node-script/" class="next">下一篇</a></div><div class="copyright"><p>© 2017 <a href="http://iamsonic.net">Sonic</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank">hexo-theme-prontera</a>.</p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-99821735-1",'auto');ga('send','pageview');</script></body></html>
