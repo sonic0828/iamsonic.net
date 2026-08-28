@@ -1,0 +1,87 @@
+/* ==========================================================================
+   page-03.css — 第 3 页：01 UE资产编辑器 · 三难点（1920×1080 画布，.p3- 前缀）
+   结构：标题区 + 三栏（描边标题框 + 难点图，压字已烘焙在图内）
+   图片尺寸：统一高 760，宽按原图比例 472 / 428 / 566，整行水平居中
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p3-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p3-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p3-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p3-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p3-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 三栏区（行总宽 1526，水平居中） ---------- */
+.p3-cols {
+  position: absolute;
+  top: 170px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+}
+
+.p3-col {
+  flex: none;
+}
+
+.p3-col--1 {
+  width: 514px; /* 760 × 995/1600 */
+}
+
+.p3-col--2 {
+  width: 466px; /* 760 × 902/1600 */
+}
+
+.p3-col--3 {
+  width: 614px; /* 760 × 1191/1600 */
+}
+
+/* 栏目标题框：白底深色描边 */
+.p3-col-head {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 2px solid #33383E;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+/* 栏目图：宽铺满栏宽，高度按原图比例自动（≈760） */
+.p3-col-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 22px;
+}

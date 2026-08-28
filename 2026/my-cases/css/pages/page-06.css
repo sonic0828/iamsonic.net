@@ -1,0 +1,82 @@
+/* ==========================================================================
+   page-06.css — 第 6 页：02 运营活动小程序 · 流程与周期（1920×1080 画布，.p6- 前缀）
+   结构：标题区 + 左右双面板（深色标题栏 + 面板图）
+   图片尺寸：统一高 742（process 宽 ≈764 居中、cycle 宽 ≈885 铺满面板）
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p6-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p6-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p6-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p6-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p6-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 双面板 ---------- */
+.p6-panels {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.p6-panel {
+  width: 885px;
+}
+
+/* 深色标题栏 */
+.p6-panel-head {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-text-strong);
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* 面板图：统一高 742，宽按原图比例自动，水平居中 */
+.p6-panel-media {
+  position: relative;
+  height: 806px;
+}
+
+.p6-panel-img {
+  display: block;
+  height: 742px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.p6-panel:first-child{
+  width:766px;
+}

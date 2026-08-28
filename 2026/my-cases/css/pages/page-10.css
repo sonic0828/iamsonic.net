@@ -1,0 +1,127 @@
+/* ==========================================================================
+   page-10.css — 第 10 页：03 AICoding – 虚拟陪伴机器人（1920×1080 画布，.p10- 前缀）
+   结构：标题区 + 左 2×2 视频面板 + 右列（主要工作文字 + 感知屏幕视频）
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p10-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p10-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p10-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p10-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p10-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 深色标题栏（通用块） ---------- */
+.p10-block-head {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-text-strong);
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom:-2px;
+}
+
+/* ---------- 左：2×2 视频面板 ---------- */
+.p10-grid {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  width: 930px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 30px;
+}
+
+.p10-grid .p10-block {
+  flex: none;
+  width: 450px;
+}
+
+.p10-block-media {
+  position: relative;
+  margin-top: 0;
+}
+
+.p10-block-media .ph {
+  position: absolute;
+  inset: 0;
+}
+
+/* ---------- 右列 ---------- */
+.p10-side {
+  position: absolute;
+  top: 180px;
+  left: 1020px;
+  width: 840px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 主要工作：深色文字区 */
+.p10-work-body {
+  background: var(--c-card);
+  padding: 20px 30px;
+  margin-bottom:14px;
+}
+
+.p10-work-item + .p10-work-item {
+  margin-top: 24px;
+}
+
+.p10-work-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.p10-work-desc {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #C9CDD2;
+}
+
+/* 感知屏幕视频：高度上限放宽 */
+.p10-block-media--fill .p10-block-video {
+  max-height: 500px;
+}
+
+/* 视频：宽与标题栏一致左右对齐，高按原比例；过高时等比收缩兜底 */
+.p10-block-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 378px;
+  margin: 0 auto;
+  object-fit: contain;
+}

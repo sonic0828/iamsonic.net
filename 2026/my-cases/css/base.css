@@ -1,0 +1,146 @@
+/* ==========================================================================
+   base.css — 全局基础样式
+   内容：reset、设计变量、长滚动容器、16:9 缩放框架、占位组件
+   说明：各页画布内一律使用 1920×1080 的 px 尺寸，禁止响应式单位；
+        缩放只由本文件框架 + js/scale.js 负责。
+   ========================================================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- 设计变量 ---------- */
+:root {
+  --scale: 1;               /* 由 js/scale.js 写入 */
+  --c-text-strong: #1A1D21; /* 主标题 */
+  --c-text: #33383E;        /* 正文深色 */
+  --c-text-sub: #6B7076;    /* 辅助灰 */
+  --c-text-faint: #A6ABB1;  /* 更浅灰 */
+  --c-card: #15181C;        /* 深色卡片 */
+  --c-bg: #FFFFFF;          /* 页面白底 */
+  --c-bg-soft: #F4F5F6;     /* 占位块浅灰 */
+  --c-line: #E8EAEC;        /* 分隔/页间底色 */
+  --c-green: #79C142;       /* 点缀绿 */
+  --c-purple: #8B49B8;      /* 点缀紫 */
+}
+
+html {
+  overflow-y: scroll; /* 始终预留滚动条，避免缩放抖动 */
+  scroll-behavior: smooth; /* 锚点跳转平滑滚动 */
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  color: var(--c-text-strong);
+  background: var(--c-line); /* 页间缝隙的浅灰底 */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 长滚动容器 ---------- */
+.stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0;             /* 页间无间隔，连续长页 */
+  padding: 40px 0 64px;
+}
+
+/* ---------- 16:9 缩放框架 ---------- */
+.page {
+  position: relative;
+  width: 100%;
+  min-width: 1000px;   /* 视口过窄：不再继续缩小，出现横向滚动 */
+  max-width: 1920px;   /* 视口过宽：不再放大，居中两侧露灰底 */
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--c-bg);
+  overflow: hidden;
+  /* 高度由 js/scale.js 设置为 画布高 × scale（默认画布高 1080，可用 data-height 定制） */
+}
+
+/* 项目分隔条：仅第 4/5 屏、第 7/8 屏之间（30px 灰条） */
+#page-05,
+#page-08 {
+  margin-top: 30px;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top center;
+}
+
+/* ---------- 占位组件 .ph ---------- */
+.ph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--c-bg-soft);
+  border: 2px dashed #C9CDD2;
+  border-radius: 4px;
+  color: var(--c-text-sub);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.ph:hover {
+  background: #EDEFF1;
+  border-color: var(--c-text-faint);
+}
+
+.ph-label {
+  padding: 0 16px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.ph-label small {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--c-text-faint);
+}
+
+/* 深色卡片内的占位变体 */
+.ph--dark {
+  background: #22262B;
+  border-color: #454B53;
+  color: var(--c-text-faint);
+}
+
+.ph--dark:hover {
+  background: #272C32;
+  border-color: #5A616A;
+}
+
+.ph--dark .ph-label small {
+  color: #7D838B;
+}
+
+/* 紧凑型占位：作为图卡背景层，只在角落留小标注 */
+.ph--compact {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ph-tag {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 2px 8px;
+  font-size: 13px;
+  color: #8A9096;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+}

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   page-11.css — 第 11 页：03 AICoding – 肉鸽小游戏（1920×1080 画布，.p11- 前缀）
+   结构：标题区 + 四列（标题栏 + 素材位）+ 右下阶段总结深色块
+   图片尺寸：按原图宽高比（定宽或定高、居中）；视频位 object-fit: contain
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p11-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p11-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p11-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p11-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 四列 ---------- */
+.p11-cols {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  gap: 20px;
+}
+
+.p11-col {
+  flex: none;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 深色标题栏（含浅灰时长标注） */
+.p11-block-head {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  background: var(--c-card);
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.p11-block-time {
+  margin-left: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--c-text-faint);
+}
+
+.p11-block-media {
+  position: relative;
+  margin-top: 0;
+}
+
+/* 图片：水平居中，按修饰类定尺寸 */
+.p11-block-img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* V1.0：宽铺满列宽，高 ≈277（546×360） */
+.p11-block-img--full {
+  width: 100%;
+  height: auto;
+}
+
+/* 规则设定 / V1.1 / V1.2：宽与 420 标题栏一致左右对齐，高按原比例（498 / 378 / 406） */
+.p11-block-img--h430,
+.p11-block-img--h360 {
+  width: 100%;
+  height: auto;
+}
+
+/* 视频：宽与标题栏一致左右对齐，高按原比例；过高时等比收缩兜底 */
+.p11-block-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.p11-block-media--v1 .p11-block-video {
+  max-height: 488px;
+}
+
+.p11-block-media--v2 .p11-block-video {
+  max-height: 472px;
+}
+
+/* ---------- 2025阶段总结（横跨第 3-4 列） ---------- */
+.p11-summary {
+  position: absolute;
+  left: 940px;
+  top: 740px;
+  width: 860px;
+  min-height: 336px;
+  padding: 28px 32px;
+  background: var(--c-card);
+}
+
+.p11-summary-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.p11-summary-list {
+  margin-top: 16px;
+  padding-left: 24px;
+  color: #E8EAEC;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.p11-summary-list li {
+  margin-bottom: 4px;
+}

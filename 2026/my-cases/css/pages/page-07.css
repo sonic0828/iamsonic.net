@@ -1,0 +1,110 @@
+/* ==========================================================================
+   page-07.css — 第 7 页：02 运营活动小程序 · 反馈（1920×1080 画布，.p7- 前缀）
+   结构：标题区 + 上部通栏深色标题栏面板 + 下部左右描边标题栏面板
+   图片尺寸：上图宽 1680（高 ≈439）；下两图统一高 300（宽 ≈827 / ≈545），均居中
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p7-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p7-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p7-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p7-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p7-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 上部通栏面板：活动数据反馈 ---------- */
+.p7-top-panel {
+  position: absolute;
+  top: 190px;
+  left: 60px;
+  right: 60px;
+}
+
+/* 深色标题栏（左对齐） */
+.p7-dark-bar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  background: var(--c-text-strong);
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.p7-bar-strong {
+  margin: 0 4px;
+  font-weight: 700;
+}
+
+/* 上图：宽 1680 居中，高按原图比例 ≈439 */
+.p7-top-img {
+  display: block;
+  width: 1680px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ---------- 下部双面板：用研报告 / 项目运营同学 ---------- */
+.p7-panels {
+  position: absolute;
+  top: 720px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.p7-panel {
+  width: 885px;
+}
+
+/* 白底描边标题栏（左对齐） */
+.p7-outline-bar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  background: #FFFFFF;
+  border: 2px solid #33383E;
+  color: var(--c-text-strong);
+  font-size: 24px;
+}
+
+.p7-panel-media {
+  position: relative;
+  margin-top: 12px;
+  height: 300px;
+}
+
+/* 下图：统一高 300，宽按原图比例自动，水平居中 */
+.p7-panel-img {
+  display: block;
+  height: 300px;
+  width: auto;
+  margin: 0 auto;
+}

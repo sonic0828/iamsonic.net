@@ -1,0 +1,105 @@
+/* ==========================================================================
+   page-09.css — 第 9 页：03 AICoding – 灵感画布（1920×1080 画布，.p9- 前缀）
+   结构：标题区 + 左侧大视频 + 右列（效果图 + 技术实现文字）
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p9-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p9-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p9-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p9-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p9-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 左侧：演示视频（槽位 1180×780，contain 不变形） ---------- */
+.p9-video {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  width: 1180px;
+}
+
+.p9-video-el {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 816px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* ---------- 右列 ---------- */
+.p9-side {
+  position: absolute;
+  top: 180px;
+  left: 1270px;
+  width: 590px;
+  background-color:#ddd;
+}
+
+/* 效果图（1051×765 → 590×≈429） */
+.p9-side-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.p9-side-title {
+  margin-top: 44px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-text-strong);
+  padding:0 20px;
+}
+
+/* 技术实现 bullet 列表 */
+.p9-tech-list {
+  margin-top: 24px;
+  list-style: none;
+  padding:0 24px 10px 24px;
+}
+
+.p9-tech-list li {
+  position: relative;
+  margin-bottom: 4px;
+  padding-left: 22px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--c-text);
+}
+
+.p9-tech-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-text-strong);
+}

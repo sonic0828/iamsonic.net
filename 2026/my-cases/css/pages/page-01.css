@@ -1,0 +1,76 @@
+/* ==========================================================================
+   page-01.css — 第 1 页：项目实践总览（1920×1080 画布，.p1- 前缀）
+   结构：左上标题区 + 三张深色卡片横排（上图下文）
+   图片尺寸：卡宽 520，图高 = 520 × 712 / 1090 ≈ 340（按原图宽高比，不裁剪）
+   ========================================================================== */
+
+/* 标题区 */
+.p1-title {
+  position: absolute;
+  top: 56px;
+  left: 100px;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.p1-title-strong {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--c-text-strong);
+}
+
+.p1-title-light {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--c-text-sub);
+}
+
+/* 卡片区：三张深色卡片横向等距排列，整体水平居中 */
+.p1-cards {
+  position: absolute;
+  top: 360px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.p1-card {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-card);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p1-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(21, 24, 28, 0.35);
+}
+
+/* 卡片上部：截图（宽铺满卡宽，高度按原图比例自动） */
+.p1-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 卡片下部：黑底标题条 */
+.p1-card-label {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+}

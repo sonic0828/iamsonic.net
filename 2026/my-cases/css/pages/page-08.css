@@ -1,0 +1,146 @@
+/* ==========================================================================
+   page-08.css — 第 8 页：03 AICoding – 前端应用开发（1920×1080 画布，.p8- 前缀）
+   结构：标题区 + 左右双面板（左：整图 / 右：4 子标题素材位 + 底部演进整图）
+   图片尺寸：均按原图宽高比（宽铺满、高自动）；视频位 object-fit: contain
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p8-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p8-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p8-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p8-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 双面板 ---------- */
+.p8-panels {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.p8-panel {
+  width: 885px;
+  background-color:#222;
+}
+
+/* 深色标题栏 */
+.p8-panel-head {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-text-strong);
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* 左面板：整图（1678×1608 → 885×≈848），与标题栏无缝 */
+.p8-panel-media {
+  margin-top: 0;
+}
+
+.p8-panel-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- 右面板：提效复合网格 ---------- */
+.p8-boost {
+  display: flex;
+  gap: 12px;
+  margin-top: 0;
+}
+
+/* 主列：子标题 1、2 */
+.p8-boost-main {
+  flex: none;
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.p8-step:first-child {
+    margin-bottom:20px;
+}
+
+/* 右侧窄列：子标题 3、4 */
+.p8-boost-side {
+  flex: none;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 深青子标题条 */
+.p8-step-bar {
+  text-align:center;
+  height: 40px;
+  line-height:40px;
+  align-items: center;
+  padding-left: 14px;
+  background: #17586B;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.p8-step-media {
+  position: relative;
+  margin-top: 0;
+}
+
+/* 步骤 1/2 静态图与 GIF：宽铺满主列，高按原图比例（≈84 / ≈244） */
+.p8-step-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 窄列视频：宽与 190 子标题栏一致左右对齐，高按原比例；过高时等比收缩兜底 */
+.p8-step-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* 底部演进整图（1848×794 → 885×≈380） */
+.p8-timeline {
+  margin-top: 16px;
+}
+
+.p8-timeline-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

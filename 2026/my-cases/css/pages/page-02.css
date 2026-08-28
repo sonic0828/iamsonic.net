@@ -1,0 +1,156 @@
+/* ==========================================================================
+   page-02.css — 第 2 页：01 UE资产编辑器（1920×1080 画布，.p2- 前缀）
+   结构：标题区 + 左右双栏（左：资产横条图 / 右：双徽章）+ 底部双大图
+   图片尺寸：均按原图宽高比等比推导，不拉伸、不裁剪
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p2-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p2-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p2-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p2-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p2-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 上部双栏 ---------- */
+.p2-top {
+  position: absolute;
+  top: 168px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 左半区：资产总览横条图，宽 966 → 高 = 966 × 1004 / 3230 ≈ 300 */
+.p2-assets-strip {
+  display: block;
+  width: 966px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 右半区：两个圆形数据徽章 */
+.p2-badges {
+  display: flex;
+  gap: 120px;
+  padding: 12px 24px 0 0;
+}
+
+.p2-badge-col {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p2-badge-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: transform 0.3s ease;
+}
+
+.p2-badge-circle:hover {
+  transform: scale(1.05);
+}
+
+.p2-badge-circle--green {
+  background: var(--c-green);
+}
+
+.p2-badge-circle--purple {
+  background: var(--c-purple);
+}
+
+.p2-badge-num {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.p2-badge-cap {
+  margin-top: 6px;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.p2-badge-desc {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.p2-badge-desc-l1 {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--c-text-strong);
+}
+
+.p2-badge-desc-l2 {
+  margin-top: 8px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 底部双大图（统一高 462，宽度各自按原图比例：807 / 754） ---------- */
+.p2-bottom {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 570px;
+  bottom: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.p2-figure {
+  position: relative;
+}
+
+.p2-figure-img {
+  display: block;
+  height: 522px;
+  width: auto;
+  border-radius: 8px;
+}
+
+/* Unreal 徽章图：宽 110（高约 165），圆形部分骑跨左图上缘，上下三角自然外延 */
+.p2-ue-badge-img {
+  position: absolute;
+  top: -78px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 110px;
+  height: auto;
+}

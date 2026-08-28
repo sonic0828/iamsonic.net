@@ -1,0 +1,49 @@
+/* ==========================================================================
+   page-05.css — 第 5 页：02 运营活动小程序 · 站点矩阵（1920×1080 画布，.p5- 前缀）
+   结构：标题区 + 单张全景图（矩阵分组与时间轴已含在图内）
+   图片尺寸：高 870，宽 ≈1562（2693×1500 原比例），水平居中
+   ========================================================================== */
+
+/* ---------- 标题区 ---------- */
+.p5-head {
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  right: 60px;
+}
+
+.p5-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.p5-title-strong {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--c-text-strong);
+}
+
+.p5-title-light {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--c-text-sub);
+}
+
+.p5-sub {
+  margin-top: 14px;
+  font-size: 22px;
+  color: var(--c-text-sub);
+}
+
+/* ---------- 全景图 ---------- */
+.p5-roadmap {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 980px;
+  width: auto;
+}
