@@ -4,20 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>个人作品集 · 项目实践</title>
+  <!-- 空 favicon：消除浏览器自动请求 /favicon.ico 产生的 404 -->
+  <link rel="icon" href="data:," />
+
+  <!-- 首屏必需样式：保持渲染阻塞 -->
   <link rel="stylesheet" href="css/base.css" />
-  <!-- 每页一个样式文件，.pX- 前缀隔离 -->
   <link rel="stylesheet" href="css/pages/page-01.css" />
   <link rel="stylesheet" href="css/pages/page-02.css" />
-  <link rel="stylesheet" href="css/pages/page-03.css" />
-  <link rel="stylesheet" href="css/pages/page-04.css" />
-  <link rel="stylesheet" href="css/pages/page-05.css" />
-  <link rel="stylesheet" href="css/pages/page-06.css" />
-  <link rel="stylesheet" href="css/pages/page-07.css" />
-  <link rel="stylesheet" href="css/pages/page-08.css" />
-  <link rel="stylesheet" href="css/pages/page-09.css" />
-  <link rel="stylesheet" href="css/pages/page-10.css" />
-  <link rel="stylesheet" href="css/pages/page-11.css" />
+
+  <!-- 第 3-11 屏样式：异步加载，不阻塞首屏渲染（media=print 不阻塞，加载完切回 all） -->
+  <link rel="stylesheet" href="css/pages/page-03.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-04.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-05.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-06.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-07.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-08.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-09.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-10.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/pages/page-11.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="css/pages/page-03.css" />
+    <link rel="stylesheet" href="css/pages/page-04.css" />
+    <link rel="stylesheet" href="css/pages/page-05.css" />
+    <link rel="stylesheet" href="css/pages/page-06.css" />
+    <link rel="stylesheet" href="css/pages/page-07.css" />
+    <link rel="stylesheet" href="css/pages/page-08.css" />
+    <link rel="stylesheet" href="css/pages/page-09.css" />
+    <link rel="stylesheet" href="css/pages/page-10.css" />
+    <link rel="stylesheet" href="css/pages/page-11.css" />
+  </noscript>
+
   <script src="js/scale.js" defer></script>
+  <script src="js/lazyload.js" defer></script>
   <script src="js/autoplay.js" defer></script>
 </head>
 <body>
@@ -27,23 +45,23 @@
     <section class="page" id="page-01">
       <div class="canvas">
         <header class="p1-title">
-          <span class="p1-title-strong">项目实践</span>
-          <span class="p1-title-light">技术 x 业务的多场景落地</span>
+          <span class="p1-title-strong">个人作品集 </span>
+          <span class="p1-title-light">2026.09月修改</span>
         </header>
 
         <div class="p1-cards">
           <a class="p1-card" href="#page-02">
-            <img class="p1-card-img" src="assets/images/p1-card-ue.jpg" alt="UE资产编辑器 封面" loading="lazy" data-asset="assets/images/p1-card-ue.jpg" onerror="this.style.display='none'" />
+            <img class="p1-card-img" src="assets/images/p1-card-ue.jpg" alt="UE资产编辑器 封面" fetchpriority="high" decoding="async" data-asset="assets/images/p1-card-ue.jpg" onerror="this.style.display='none'" />
             <div class="p1-card-label">UE资产编辑器</div>
           </a>
 
           <a class="p1-card" href="#page-05">
-            <img class="p1-card-img" src="assets/images/p1-card-miniprogram.jpg" alt="运营活动小程序 截图墙" loading="lazy" data-asset="assets/images/p1-card-miniprogram.jpg" onerror="this.style.display='none'" />
+            <img class="p1-card-img" src="assets/images/p1-card-miniprogram.jpg" alt="运营活动小程序 截图墙" fetchpriority="high" decoding="async" data-asset="assets/images/p1-card-miniprogram.jpg" onerror="this.style.display='none'" />
             <div class="p1-card-label">运营活动小程序</div>
           </a>
 
           <a class="p1-card" href="#page-08">
-            <img class="p1-card-img" src="assets/images/p1-card-aicoding.jpg" alt="AI Coding 界面" loading="lazy" data-asset="assets/images/p1-card-aicoding.jpg" onerror="this.style.display='none'" />
+            <img class="p1-card-img" src="assets/images/p1-card-aicoding.jpg" alt="AI Coding 界面" fetchpriority="high" decoding="async" data-asset="assets/images/p1-card-aicoding.jpg" onerror="this.style.display='none'" />
             <div class="p1-card-label">Vibe Coding</div>
           </a>
         </div>
@@ -63,7 +81,7 @@
 
         <div class="p2-top">
           <!-- 左半区：资产总览横条图（角色/建筑、场景资产、功能交互 三卡合一，文字已在图内） -->
-          <img class="p2-assets-strip" src="assets/images/p2-assets-character.jpg" alt="角色/建筑、场景资产、功能交互 资产总览" loading="lazy" data-asset="assets/images/p2-assets-character.jpg" onerror="this.style.display='none'" />
+          <img class="p2-assets-strip" src="assets/images/p2-assets-character.jpg" alt="角色/建筑、场景资产、功能交互 资产总览" decoding="async" data-asset="assets/images/p2-assets-character.jpg" onerror="this.style.display='none'" />
 
           <!-- 右半区：两个圆形数据徽章 -->
           <div class="p2-badges">
@@ -93,11 +111,11 @@
         <!-- 底部：两张大图通栏 -->
         <div class="p2-bottom">
           <figure class="p2-figure">
-            <img class="p2-ue-badge-img" src="assets/images/p2-unreal-logo.png" alt="Unreal Engine" data-asset="assets/images/p2-unreal-logo.png" onerror="this.style.display='none'" />
-            <img class="p2-figure-img" src="assets/images/p2-ue-editor.jpg" alt="UE4 编辑器 操作演示" loading="lazy" data-asset="assets/images/p2-ue-editor.jpg" onerror="this.style.display='none'" />
+            <img class="p2-ue-badge-img" src="assets/images/p2-unreal-logo.png" alt="Unreal Engine" decoding="async" data-asset="assets/images/p2-unreal-logo.png" onerror="this.style.display='none'" />
+            <img class="p2-figure-img" src="assets/images/p2-ue-editor.jpg" alt="UE4 编辑器 操作演示" decoding="async" data-asset="assets/images/p2-ue-editor.jpg" onerror="this.style.display='none'" />
           </figure>
           <figure class="p2-figure">
-            <img class="p2-figure-img" src="assets/images/p2-schedule.jpg" alt="开发排期表" loading="lazy" data-asset="assets/images/p2-schedule.jpg" onerror="this.style.display='none'" />
+            <img class="p2-figure-img" src="assets/images/p2-schedule.jpg" alt="开发排期表" decoding="async" data-asset="assets/images/p2-schedule.jpg" onerror="this.style.display='none'" />
           </figure>
         </div>
       </div>
@@ -117,15 +135,15 @@
         <div class="p3-cols">
           <div class="p3-col p3-col--1">
             <div class="p3-col-head">难点1：多角色有效分工？</div>
-            <img class="p3-col-img" src="assets/images/p3-nodus-1.png" alt="难点1：多角色有效分工——分工约定，并行开发、版本控制" loading="lazy" data-asset="assets/images/p3-nodus-1.png" onerror="this.style.display='none'" />
+            <img class="p3-col-img" data-src="assets/images/p3-nodus-1.png" alt="难点1：多角色有效分工——分工约定，并行开发、版本控制" loading="lazy" decoding="async" data-asset="assets/images/p3-nodus-1.png" onerror="this.style.display='none'" />
           </div>
           <div class="p3-col p3-col--2">
             <div class="p3-col-head">难点2：不同阵营的颜色？</div>
-            <img class="p3-col-img" src="assets/images/p3-nodus-2.jpg" alt="难点2：不同阵营的颜色——纹理遮照，简单、低成本的换色" loading="lazy" data-asset="assets/images/p3-nodus-2.jpg" onerror="this.style.display='none'" />
+            <img class="p3-col-img" data-src="assets/images/p3-nodus-2.jpg" alt="难点2：不同阵营的颜色——纹理遮照，简单、低成本的换色" loading="lazy" decoding="async" data-asset="assets/images/p3-nodus-2.jpg" onerror="this.style.display='none'" />
           </div>
           <div class="p3-col p3-col--3">
             <div class="p3-col-head">难点3：单位AI如何实现？</div>
-            <img class="p3-col-img" src="assets/images/p3-nodus-3.png" alt="难点3：单位AI如何实现——AI行为树，阵列、攻击、移动、巡逻死亡" loading="lazy" data-asset="assets/images/p3-nodus-3.png" onerror="this.style.display='none'" />
+            <img class="p3-col-img" data-src="assets/images/p3-nodus-3.png" alt="难点3：单位AI如何实现——AI行为树，阵列、攻击、移动、巡逻死亡" loading="lazy" decoding="async" data-asset="assets/images/p3-nodus-3.png" onerror="this.style.display='none'" />
           </div>
         </div>
       </div>
@@ -143,7 +161,7 @@
         </header>
 
         <div class="p4-video">
-          <video class="p4-video-el" src="assets/images/p4-demo-video-6s-compressed.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p4-demo-video-6s-compressed.mp4"></video>
+          <video class="p4-video-el" data-src="assets/images/p4-demo-video-6s-compressed.mp4" poster="assets/images/p4-demo-video-6s-compressed-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p4-demo-video-6s-compressed.mp4"></video>
         </div>
       </div>
     </section>
@@ -160,7 +178,7 @@
         </header>
 
         <!-- 站点矩阵全景图（8 分组 + 时间轴已含在图内） -->
-        <img class="p5-roadmap" src="assets/images/p5-roadmap.jpg" alt="运营活动小程序站点矩阵：概念站/预约站/版本预约/拉新回流/品牌传播/下载站/IP联动/年度数据，覆盖研发、公测、运营三阶段" loading="lazy" data-asset="assets/images/p5-roadmap.jpg" onerror="this.style.display='none'" />
+        <img class="p5-roadmap" data-src="assets/images/p5-roadmap.jpg" alt="运营活动小程序站点矩阵：概念站/预约站/版本预约/拉新回流/品牌传播/下载站/IP联动/年度数据，覆盖研发、公测、运营三阶段" loading="lazy" decoding="async" data-asset="assets/images/p5-roadmap.jpg" onerror="this.style.display='none'" />
       </div>
     </section>
 
@@ -179,13 +197,13 @@
           <div class="p6-panel">
             <div class="p6-panel-head">需求流程简化</div>
             <div class="p6-panel-media">
-              <img class="p6-panel-img" src="assets/images/p6-process.png" alt="需求流程简化：闭环前/闭环后需求流程" loading="lazy" data-asset="assets/images/p6-process.png" onerror="this.style.display='none'" />
+              <img class="p6-panel-img" data-src="assets/images/p6-process.png" alt="需求流程简化：闭环前/闭环后需求流程" loading="lazy" decoding="async" data-asset="assets/images/p6-process.png" onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="p6-panel">
             <div class="p6-panel-head">开发周期缩短</div>
             <div class="p6-panel-media">
-              <img class="p6-panel-img" src="assets/images/p6-cycle.png" alt="开发周期缩短：开发闭环前后对比与活动全链路支持" loading="lazy" data-asset="assets/images/p6-cycle.png" onerror="this.style.display='none'" />
+              <img class="p6-panel-img" data-src="assets/images/p6-cycle.png" alt="开发周期缩短：开发闭环前后对比与活动全链路支持" loading="lazy" decoding="async" data-asset="assets/images/p6-cycle.png" onerror="this.style.display='none'" />
             </div>
           </div>
         </div>
@@ -207,7 +225,7 @@
         <div class="p7-top-panel">
           <div class="p7-dark-bar">一些 <span class="p7-bar-strong">活动数据</span> 反馈</div>
           <div class="p7-top-media">
-            <img class="p7-top-img" src="assets/images/p7-feedback-1.jpg" alt="活动数据反馈：数据总览与结论标注" loading="lazy" data-asset="assets/images/p7-feedback-1.jpg" onerror="this.style.display='none'" />
+            <img class="p7-top-img" data-src="assets/images/p7-feedback-1.jpg" alt="活动数据反馈：数据总览与结论标注" loading="lazy" decoding="async" data-asset="assets/images/p7-feedback-1.jpg" onerror="this.style.display='none'" />
           </div>
         </div>
 
@@ -216,13 +234,13 @@
           <div class="p7-panel">
             <div class="p7-outline-bar">一些 <span class="p7-bar-strong">用研报告</span> 反馈</div>
             <div class="p7-panel-media">
-              <img class="p7-panel-img" src="assets/images/p7-feedback-2.jpg" alt="用研报告反馈" loading="lazy" data-asset="assets/images/p7-feedback-2.jpg" onerror="this.style.display='none'" />
+              <img class="p7-panel-img" data-src="assets/images/p7-feedback-2.jpg" alt="用研报告反馈" loading="lazy" decoding="async" data-asset="assets/images/p7-feedback-2.jpg" onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="p7-panel">
             <div class="p7-outline-bar">一些 <span class="p7-bar-strong">项目运营同学</span> 反馈</div>
             <div class="p7-panel-media">
-              <img class="p7-panel-img" src="assets/images/p7-feedback-3.jpg" alt="项目运营同学反馈" loading="lazy" data-asset="assets/images/p7-feedback-3.jpg" onerror="this.style.display='none'" />
+              <img class="p7-panel-img" data-src="assets/images/p7-feedback-3.jpg" alt="项目运营同学反馈" loading="lazy" decoding="async" data-asset="assets/images/p7-feedback-3.jpg" onerror="this.style.display='none'" />
             </div>
           </div>
         </div>
@@ -244,7 +262,7 @@
           <div class="p8-panel">
             <div class="p8-panel-head">全面拥抱AI编码</div>
             <div class="p8-panel-media">
-              <img class="p8-panel-img" src="assets/images/p8-ai-ide.png" alt="全面拥抱AI编码：常用 AI IDE / 编程模型 / 使用额度总览" loading="lazy" data-asset="assets/images/p8-ai-ide.png" onerror="this.style.display='none'" />
+              <img class="p8-panel-img" data-src="assets/images/p8-ai-ide.png" alt="全面拥抱AI编码：常用 AI IDE / 编程模型 / 使用额度总览" loading="lazy" decoding="async" data-asset="assets/images/p8-ai-ide.png" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -256,32 +274,32 @@
                 <div class="p8-step">
                   <div class="p8-step-bar">1. 文字描述需求</div>
                   <div class="p8-step-media p8-step-media--s1">
-                    <img class="p8-step-img" src="assets/images/p8-step-1.gif" alt="1. 文字描述需求" loading="lazy" data-asset="assets/images/p8-step-1.gif" onerror="this.style.display='none'" />
+                    <img class="p8-step-img" data-src="assets/images/p8-step-1.gif" alt="1. 文字描述需求" loading="lazy" decoding="async" data-asset="assets/images/p8-step-1.gif" onerror="this.style.display='none'" />
                   </div>
                 </div>
                 <div class="p8-step">
                   <div class="p8-step-bar">2. AI编码自动生成</div>
                   <div class="p8-step-media p8-step-media--s2">
-                    <img class="p8-step-img" src="assets/images/p8-step-2.gif" alt="2. AI编码自动生成" loading="lazy" data-asset="assets/images/p8-step-2.gif" onerror="this.style.display='none'" />
+                    <img class="p8-step-img" data-src="assets/images/p8-step-2.gif" alt="2. AI编码自动生成" loading="lazy" decoding="async" data-asset="assets/images/p8-step-2.gif" onerror="this.style.display='none'" />
                   </div>
                 </div>
               </div>
               <div class="p8-boost-side">
                 <div class="p8-step-bar">3. 调试修改</div>
                 <div class="p8-step-media p8-step-media--tall">
-                  <video class="p8-step-video" src="assets/images/p8-step-4.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p8-step-4.mp4"></video>
+                  <video class="p8-step-video" data-src="assets/images/p8-step-4.mp4" poster="assets/images/p8-step-4-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p8-step-4.mp4"></video>
                 </div>
               </div>
               <div class="p8-boost-side">
                 <div class="p8-step-bar">4. 效果运用</div>
                 <div class="p8-step-media p8-step-media--tall">
-                  <video class="p8-step-video" src="assets/images/p8-step-3.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p8-step-3.mp4"></video>
+                  <video class="p8-step-video" data-src="assets/images/p8-step-3.mp4" poster="assets/images/p8-step-3-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p8-step-3.mp4"></video>
                 </div>
               </div>
             </div>
             <!-- 底部：过去 / 25年 / 26年 编码方式演进（一整张图） -->
             <div class="p8-timeline">
-              <img class="p8-timeline-img" src="assets/images/p8-timeline.png" alt="过去 / 25年 / 26年 编码方式演进" loading="lazy" data-asset="assets/images/p8-timeline.png" onerror="this.style.display='none'" />
+              <img class="p8-timeline-img" data-src="assets/images/p8-timeline.png" alt="过去 / 25年 / 26年 编码方式演进" loading="lazy" decoding="async" data-asset="assets/images/p8-timeline.png" onerror="this.style.display='none'" />
             </div>
           </div>
         </div>
@@ -301,13 +319,13 @@
 
         <!-- 左侧：演示视频（进入视口自动循环播放） -->
         <div class="p9-video">
-          <video class="p9-video-el" src="assets/images/p9-canvas-demo.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p9-canvas-demo.mp4"></video>
+          <video class="p9-video-el" data-src="assets/images/p9-canvas-demo.mp4" poster="assets/images/p9-canvas-demo-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p9-canvas-demo.mp4"></video>
         </div>
 
         <!-- 右列：效果截图 + 技术实现 -->
         <div class="p9-side">
           <div class="p9-side-media">
-            <img class="p9-side-img" src="assets/images/p9-canvas-3d.jpg" alt="图生3D 效果截图" loading="lazy" data-asset="assets/images/p9-canvas-3d.jpg" onerror="this.style.display='none'" />
+            <img class="p9-side-img" data-src="assets/images/p9-canvas-3d.jpg" alt="图生3D 效果截图" loading="lazy" decoding="async" data-asset="assets/images/p9-canvas-3d.jpg" onerror="this.style.display='none'" />
           </div>
           <h3 class="p9-side-title">技术实现</h3>
           <ul class="p9-tech-list">
@@ -337,25 +355,25 @@
           <div class="p10-block">
             <div class="p10-block-head">可配置LLM、语音、人设</div>
             <div class="p10-block-media">
-              <video class="p10-block-video" src="assets/images/p10-robot-config.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p10-robot-config.mp4"></video>
+              <video class="p10-block-video" data-src="assets/images/p10-robot-config.mp4" poster="assets/images/p10-robot-config-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p10-robot-config.mp4"></video>
             </div>
           </div>
           <div class="p10-block">
             <div class="p10-block-head">中文/语音 对话</div>
             <div class="p10-block-media">
-              <video class="p10-block-video" src="assets/images/p10-robot-dialogue.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p10-robot-dialogue.mp4"></video>
+              <video class="p10-block-video" data-src="assets/images/p10-robot-dialogue.mp4" poster="assets/images/p10-robot-dialogue-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p10-robot-dialogue.mp4"></video>
             </div>
           </div>
           <div class="p10-block">
             <div class="p10-block-head">外观模型可替换</div>
             <div class="p10-block-media">
-              <video class="p10-block-video" src="assets/images/p10-robot-appearance.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p10-robot-appearance.mp4"></video>
+              <video class="p10-block-video" data-src="assets/images/p10-robot-appearance.mp4" poster="assets/images/p10-robot-appearance-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p10-robot-appearance.mp4"></video>
             </div>
           </div>
           <div class="p10-block">
             <div class="p10-block-head">绑定骨骼动画</div>
             <div class="p10-block-media">
-              <video class="p10-block-video" src="assets/images/p10-robot-skeleton.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p10-robot-skeleton.mp4"></video>
+              <video class="p10-block-video" data-src="assets/images/p10-robot-skeleton.mp4" poster="assets/images/p10-robot-skeleton-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p10-robot-skeleton.mp4"></video>
             </div>
           </div>
         </div>
@@ -378,7 +396,7 @@
           <div class="p10-block p10-block--fill">
             <div class="p10-block-head">可感知屏幕并语音反馈（定时截图、识别）</div>
             <div class="p10-block-media p10-block-media--fill">
-              <video class="p10-block-video" src="assets/images/p10-robot-screen.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p10-robot-screen.mp4"></video>
+              <video class="p10-block-video" data-src="assets/images/p10-robot-screen.mp4" poster="assets/images/p10-robot-screen-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p10-robot-screen.mp4"></video>
             </div>
           </div>
         </div>
@@ -400,13 +418,13 @@
             <div class="p11-block">
               <div class="p11-block-head">V1.0 基础框架<span class="p11-block-time">（2小时）</span></div>
               <div class="p11-block-media">
-                <img class="p11-block-img p11-block-img--full" src="assets/images/p11-v10-framework.gif" alt="V1.0 基础框架" loading="lazy" data-asset="assets/images/p11-v10-framework.gif" onerror="this.style.display='none'" />
+                <img class="p11-block-img p11-block-img--full" data-src="assets/images/p11-v10-framework.gif" alt="V1.0 基础框架" loading="lazy" decoding="async" data-asset="assets/images/p11-v10-framework.gif" onerror="this.style.display='none'" />
               </div>
             </div>
             <div class="p11-block">
               <div class="p11-block-head">规则设定<span class="p11-block-time">（0.5小时）</span></div>
               <div class="p11-block-media">
-                <img class="p11-block-img p11-block-img--h430" src="assets/images/p11-rules.png" alt="规则设定" loading="lazy" data-asset="assets/images/p11-rules.png" onerror="this.style.display='none'" />
+                <img class="p11-block-img p11-block-img--h430" data-src="assets/images/p11-rules.png" alt="规则设定" loading="lazy" decoding="async" data-asset="assets/images/p11-rules.png" onerror="this.style.display='none'" />
               </div>
             </div>
           </div>
@@ -414,13 +432,13 @@
             <div class="p11-block">
               <div class="p11-block-head">V1.1 +背景素材<span class="p11-block-time">（4小时）</span></div>
               <div class="p11-block-media">
-                <img class="p11-block-img p11-block-img--h360" src="assets/images/p11-v11-bg.png" alt="V1.1 背景素材" loading="lazy" data-asset="assets/images/p11-v11-bg.png" onerror="this.style.display='none'" />
+                <img class="p11-block-img p11-block-img--h360" data-src="assets/images/p11-v11-bg.png" alt="V1.1 背景素材" loading="lazy" decoding="async" data-asset="assets/images/p11-v11-bg.png" onerror="this.style.display='none'" />
               </div>
             </div>
             <div class="p11-block">
               <div class="p11-block-head">V1.2 +怪物素材<span class="p11-block-time">（4小时）</span></div>
               <div class="p11-block-media">
-                <img class="p11-block-img p11-block-img--h360" src="assets/images/p11-v12-monster.png" alt="V1.2 怪物素材" loading="lazy" data-asset="assets/images/p11-v12-monster.png" onerror="this.style.display='none'" />
+                <img class="p11-block-img p11-block-img--h360" data-src="assets/images/p11-v12-monster.png" alt="V1.2 怪物素材" loading="lazy" decoding="async" data-asset="assets/images/p11-v12-monster.png" onerror="this.style.display='none'" />
               </div>
             </div>
           </div>
@@ -428,7 +446,7 @@
             <div class="p11-block">
               <div class="p11-block-head">V1.3 +主角素材<span class="p11-block-time">（4小时）</span></div>
               <div class="p11-block-media p11-block-media--v1">
-                <video class="p11-block-video" src="assets/images/p11-v13-hero.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p11-v13-hero.mp4"></video>
+                <video class="p11-block-video" data-src="assets/images/p11-v13-hero.mp4" poster="assets/images/p11-v13-hero-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p11-v13-hero.mp4"></video>
               </div>
             </div>
           </div>
@@ -436,7 +454,7 @@
             <div class="p11-block">
               <div class="p11-block-head">特效序列帧图<span class="p11-block-time">（抽卡3小时）</span></div>
               <div class="p11-block-media p11-block-media--v2">
-                <video class="p11-block-video" src="assets/images/p11-effects-frame.mp4" autoplay muted loop playsinline preload="metadata" data-autoplay data-asset="assets/images/p11-effects-frame.mp4"></video>
+                <video class="p11-block-video" data-src="assets/images/p11-effects-frame.mp4" poster="assets/images/p11-effects-frame-poster.jpg" autoplay muted loop playsinline preload="none" data-autoplay data-asset="assets/images/p11-effects-frame.mp4"></video>
               </div>
             </div>
           </div>
