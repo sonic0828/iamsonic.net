@@ -78,6 +78,11 @@ body {
   transform-origin: top center;
 }
 
+/* 视频源未装载（含首帧图尚未应用）期间的占位底色，避免透明/白块 */
+video[data-src] {
+  background: var(--c-card);
+}
+
 /* ---------- 占位组件 .ph ---------- */
 .ph {
   position: relative;
