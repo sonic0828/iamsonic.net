@@ -1,5 +1,6 @@
 ---
 title: 关于我
+date: 2017-05-26
 ---
 
 ![](http://iamsonic-1253772978.cosgz.myqcloud.com/blog/about/avatar.png)
@@ -20,11 +21,3 @@ title: 关于我
 - 不爱喝咖啡的星巴克会员兼外賣仔
 - 跟爱妻一起整蛊儿子
 
-社交媒体
----
-
-- QQ: 173456
-- WX: sonichuang88
-- Twitter: [@sonic0828](https://twitter.com/sonic0828)
-- Instagram: [iamsonic](https://www.instagram.com/iamsonic/)
-- 微博: [@融点Sonic](http://weibo.com/sonic0828/)
