@@ -66,3 +66,4 @@ source
 themes
 scaffolds
 public
+/db.json
